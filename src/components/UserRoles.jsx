@@ -134,7 +134,7 @@ const UserRoles = () => {
              transition={{ delay: 0.1 }}
              className="text-2xl text-slate-500 md:px-20 font-medium leading-relaxed tracking-tight"
           >
-            GoodSync ERP uses strict Role-Based Access Control (RBAC) to give every user exactly the tools they need — and nothing they don't.
+            GOODSYNK ERP uses strict Role-Based Access Control (RBAC) to give every user exactly the tools they need — and nothing they don't.
           </motion.p>
         </div>
 

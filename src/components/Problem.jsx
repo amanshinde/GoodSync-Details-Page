@@ -112,7 +112,7 @@ const Problem = () => {
              transition={{ delay: 0.1 }}
              className="text-lg text-slate-500 md:px-20 font-medium leading-relaxed tracking-tight"
           >
-            Fragmented processes, inconsistent records, and manual operations are costing schools time, money, and trust. GoodSync ERP fixes all of it.
+            Fragmented processes, inconsistent records, and manual operations are costing schools time, money, and trust. GOODSYNK ERP fixes all of it.
           </motion.p>
         </div>
 

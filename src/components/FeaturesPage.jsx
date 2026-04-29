@@ -18,7 +18,7 @@ const ALL_FEATURES = [
     color: 'indigo',
     title: 'Student Data Management',
     tagline: 'One source of truth for every student.',
-    desc: 'GoodSync ERP maintains a structured, searchable student profile for each enrolled learner — covering admission records, guardian details, enrollment lifecycle, document storage, and quick filters across the school.',
+    desc: 'GOODSYNK ERP maintains a structured, searchable student profile for each enrolled learner — covering admission records, guardian details, enrollment lifecycle, document storage, and quick filters across the school.',
     highlights: [
       'Admission/roll number, class/section, academic year',
       'Guardian contact details, address, emergency contact',
@@ -56,7 +56,7 @@ const ALL_FEATURES = [
     color: 'blue',
     title: 'Marks & Result Management',
     tagline: 'From marks entry to published results — structured and controlled.',
-    desc: 'GoodSync ERP supports structured evaluation workflows from exam configuration and bulk marks entry to admin approval and instant result publishing with subject-wise breakdowns.',
+    desc: 'GOODSYNK ERP supports structured evaluation workflows from exam configuration and bulk marks entry to admin approval and instant result publishing with subject-wise breakdowns.',
     highlights: [
       'Define exam types: Unit Test, Midterm, Final, etc.',
       'Set subjects, max marks, and passing criteria per exam',
@@ -94,7 +94,7 @@ const ALL_FEATURES = [
     color: 'emerald',
     title: 'Fee Management System',
     tagline: 'Structured fee collection with zero manual effort.',
-    desc: 'GoodSync ERP supports fee structure setup, installment planning, automated challan generation, and dues tracking — with full parent self-service visibility and export for accounts.',
+    desc: 'GOODSYNK ERP supports fee structure setup, installment planning, automated challan generation, and dues tracking — with full parent self-service visibility and export for accounts.',
     highlights: [
       'Class-wise fee components: tuition, lab, transport, etc.',
       'One-time, monthly, quarterly, and annual fee components',
@@ -132,7 +132,7 @@ const ALL_FEATURES = [
     color: 'sky',
     title: 'Communication System',
     tagline: 'Centralized messaging. No more informal channels.',
-    desc: 'GoodSync ERP includes a structured messaging system to reduce dependence on informal channels like WhatsApp. Broadcasts, class-specific messages, and templates — all in one audit-friendly system.',
+    desc: 'GOODSYNK ERP includes a structured messaging system to reduce dependence on informal channels like WhatsApp. Broadcasts, class-specific messages, and templates — all in one audit-friendly system.',
     highlights: [
       'Admin can broadcast to all users, teachers, or specific class/section',
       'Teacher messaging to assigned class/section (policy-based)',
@@ -151,7 +151,7 @@ const ALL_FEATURES = [
     color: 'amber',
     title: 'ID Card Generation',
     tagline: 'Standardized, branded ID cards — generated in bulk.',
-    desc: 'GoodSync ERP generates standardized ID cards for students (and optionally staff) using school-branded templates. Auto-populate student details and batch generate for entire classes.',
+    desc: 'GOODSYNK ERP generates standardized ID cards for students (and optionally staff) using school-branded templates. Auto-populate student details and batch generate for entire classes.',
     highlights: [
       'Multiple templates: different by grade, campus, or purpose',
       'School branding: logo, colors, and layout customization',
@@ -170,7 +170,7 @@ const ALL_FEATURES = [
     color: 'orange',
     title: 'Hall Ticket Generation',
     tagline: 'Exam admit cards with smart eligibility rules.',
-    desc: 'GoodSync ERP generates hall tickets (admit cards) for exams with consistent formatting, student details, and integrated exam schedules. Policy-driven rules block generation for ineligible students.',
+    desc: 'GOODSYNK ERP generates hall tickets (admit cards) for exams with consistent formatting, student details, and integrated exam schedules. Policy-driven rules block generation for ineligible students.',
     highlights: [
       'Exam-wise hall ticket templates with consistent formatting',
       'Auto-populate student details and exam schedule (if enabled)',
@@ -189,7 +189,7 @@ const ALL_FEATURES = [
     color: 'fuchsia',
     title: 'Reports & Analytics Dashboard',
     tagline: 'Admin decisions backed by real data.',
-    desc: 'GoodSync ERP includes dashboards to help admin make informed decisions — covering attendance trends, academic performance, and fee collection analytics, all exportable for compliance.',
+    desc: 'GOODSYNK ERP includes dashboards to help admin make informed decisions — covering attendance trends, academic performance, and fee collection analytics, all exportable for compliance.',
     highlights: [
       'Attendance: daily trend, monthly by class, at-risk student lists',
       'Academic: subject-wise performance distribution, class-wise averages',
@@ -208,7 +208,7 @@ const ALL_FEATURES = [
     color: 'teal',
     title: 'Parent Transparency Features',
     tagline: 'Everything a parent needs — without calling the school.',
-    desc: 'GoodSync ERP is designed to reduce parent-school friction by giving parents self-service visibility into attendance, results, fee status, and communication through the mobile app.',
+    desc: 'GOODSYNK ERP is designed to reduce parent-school friction by giving parents self-service visibility into attendance, results, fee status, and communication through the mobile app.',
     highlights: [
       'Attendance: daily status, monthly summary, absence history',
       'Results: exam/term results after admin publishing, subject-wise breakup',
@@ -331,7 +331,7 @@ const FeaturesPage = () => {
 
         {/* Sidebar footer */}
         <div className="px-4 py-4 border-t border-white/50">
-          <p className="text-[10px] text-slate-400 text-center font-medium">{ALL_FEATURES.length} features in GoodSync ERP</p>
+          <p className="text-[10px] text-slate-400 text-center font-medium">{ALL_FEATURES.length} features in GOODSYNK ERP</p>
         </div>
       </aside>
 

@@ -27,22 +27,23 @@ const Navbar = () => {
       }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`relative flex items-center justify-between px-6 py-3 transition-all duration-700 ${(isScrolled || isSubPage)
-            ? 'bg-white/40 backdrop-blur-xl shadow-lg rounded-full border border-white/20'
-            : 'bg-transparent'
+          ? 'bg-white/40 backdrop-blur-xl shadow-lg rounded-full border border-white/20'
+          : 'bg-transparent'
           }`}>
           {/* Logo */}
           <Link to="/">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-3 group cursor-pointer"
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.2 }}
+              className="cursor-pointer"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-violet-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-200 group-hover:rotate-12 transition-transform">
-                <span className="text-white font-black text-xl font-outfit">G</span>
-              </div>
-              <span className="text-2xl font-[900] font-outfit text-slate-900 tracking-tighter">
-                Gud<span className="text-indigo-600">ERP</span>
-              </span>
+              <img
+                src="/fulllogocolor.png"
+                alt="GOODSYNK ERP Logo"
+                className="h-8 w-auto object-contain"
+              />
             </motion.div>
           </Link>
 

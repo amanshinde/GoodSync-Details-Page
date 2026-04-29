@@ -79,7 +79,7 @@ const Workflow = () => {
              viewport={{ once: true }}
              className="text-5xl md:text-7xl font-black font-outfit text-slate-900 leading-tight tracking-tight"
           >
-            How <span className="text-indigo-600">GoodSync ERP</span> Works.
+            How <span className="text-indigo-600">GOODSYNK ERP</span> Works.
           </motion.h2>
           <motion.p 
              initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ const Workflow = () => {
              transition={{ delay: 0.1 }}
              className="text-lg text-slate-500 md:px-20 font-medium leading-relaxed tracking-tight"
           >
-            From your first login to parents viewing exam results, here is exactly how GoodSync ERP digitizes your entire school.
+            From your first login to parents viewing exam results, here is exactly how GOODSYNK ERP digitizes your entire school.
           </motion.p>
         </div>
 

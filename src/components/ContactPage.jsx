@@ -68,7 +68,7 @@ const ContactPage = () => {
                        </div>
                        <div>
                          <p className="text-sm font-bold text-slate-400 mb-0.5 uppercase tracking-wider">Email Us</p>
-                         <p className="text-lg font-bold text-slate-800">sales@GoodSync ERP.com</p>
+                         <p className="text-lg font-bold text-slate-800">sales@GOODSYNK ERP.com</p>
                        </div>
                     </div>
 

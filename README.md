@@ -1,6 +1,6 @@
-# GoodSync ERP - Modern ERP Solution
+# GOODSYNK ERP - Modern ERP Solution
 
-A sleek, responsive, and premium landing page for **GoodSync ERP**, a comprehensive Enterprise Resource Planning solution. Built with modern web technologies to provide an exceptional user experience.
+A sleek, responsive, and premium landing page for **GOODSYNK ERP**, a comprehensive Enterprise Resource Planning solution. Built with modern web technologies to provide an exceptional user experience.
 
 ## 🚀 Features
 
@@ -29,8 +29,8 @@ A sleek, responsive, and premium landing page for **GoodSync ERP**, a comprehens
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/madhwadevcloud-hash/GoodSync-Details-Page.git
-   cd GoodSync-Details-Page
+   git clone https://github.com/madhwadevcloud-hash/GOODSYNK-Details-Page.git
+   cd GOODSYNK-Details-Page
    ```
 
 2. Install dependencies:

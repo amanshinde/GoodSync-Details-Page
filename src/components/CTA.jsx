@@ -38,7 +38,7 @@ const CTA = () => {
                 Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-violet-200">Elevate</span> <br /> All Education?
               </h2>
               <p className="text-xl md:text-2xl text-white font-medium max-w-3xl mx-auto leading-relaxed shadow-sm opacity-90">
-                Join 500+ schools that have transformed their operations with GoodSync ERP. Get started today.
+                Join 500+ schools that have transformed their operations with GOODSYNK ERP. Get started today.
               </p>
             </motion.div>
 
@@ -63,7 +63,7 @@ const CTA = () => {
                  </div>
                  <div className="text-left">
                     <p className="text-white font-black text-2xl">500k+ Active Users</p>
-                    <p className="text-white/70 font-bold text-lg">Trust GoodSync ERP every day</p>
+                    <p className="text-white/70 font-bold text-lg">Trust GOODSYNK ERP every day</p>
                  </div>
               </div>
             </div>

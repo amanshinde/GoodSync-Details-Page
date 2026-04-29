@@ -60,7 +60,7 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-slate-500 max-w-4xl mx-auto font-medium leading-relaxed tracking-tight">
               Digitize core school processes. Improve operational efficiency for administration & teachers. <br className="hidden md:block" />
               Give parents real-time visibility into attendance, academics & fees — with{' '}
-              <span className="font-extrabold text-slate-900 border-b-4 border-indigo-600/40 pb-1">GoodSync ERP.</span>
+              <span className="font-extrabold text-slate-900 border-b-4 border-indigo-600/40 pb-1">GOODSYNK ERP.</span>
             </p>
           </div>
 

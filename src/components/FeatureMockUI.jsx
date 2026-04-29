@@ -1107,7 +1107,7 @@ const ParentMock = () => (
         <div className="w-36 bg-slate-900 rounded-2xl p-1.5 shadow-xl flex-shrink-0">
           <div className="bg-white rounded-xl overflow-hidden">
             <div className="bg-teal-600 px-2 py-2 text-center">
-              <p className="text-[8px] font-black text-white">GoodSync ERP Parent</p>
+              <p className="text-[8px] font-black text-white">GOODSYNK ERP Parent</p>
               <p className="text-[7px] text-teal-200">Aarav Sharma · 10-A</p>
             </div>
             <div className="p-2 space-y-1.5">

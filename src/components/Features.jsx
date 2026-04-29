@@ -187,7 +187,7 @@ const Features = () => {
              transition={{ delay: 0.1 }}
              className="text-2xl text-slate-500 md:px-20 font-medium leading-relaxed tracking-tight"
           >
-            GoodSync ERP covers every operationally critical workflow in a single platform — from student records to SOS alerts — eliminating tool sprawl and manual work.
+            GOODSYNK ERP covers every operationally critical workflow in a single platform — from student records to SOS alerts — eliminating tool sprawl and manual work.
           </motion.p>
         </div>
 

@@ -49,7 +49,7 @@ const ContactOptions = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-black font-outfit text-slate-900 tracking-tight"
           >
-            Connected, Simple, <span className="text-indigo-600">Gud.</span>
+            Connected, Simple, <span className="text-indigo-600">Good.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ const ContactOptions = () => {
           <ContactCard 
             icon={GraduationCap}
             title="Book a Live Demo"
-            desc="See GoodSync ERP in action. We'll walk you through all 11 modules and show you the exact impact on your school."
+            desc="See GOODSYNK ERP in action. We'll walk you through all 11 modules and show you the exact impact on your school."
             action="Schedule Now"
             link="/contact"
             color="bg-indigo-50 text-indigo-600"
@@ -102,16 +102,16 @@ const ContactOptions = () => {
           <div className="flex items-center gap-6">
              <div className="flex items-center gap-3">
                <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white font-bold">G</div>
-               <span className="font-bold text-slate-900">GoodSync ERP Global</span>
+               <span className="font-bold text-slate-900">GOODSYNK ERP Global</span>
              </div>
              <div className="h-4 w-px bg-slate-200 hidden md:block" />
              <p className="text-sm font-medium text-slate-500">Trusted by 500+ Institutions Worldwide</p>
           </div>
           
           <div className="flex items-center gap-6">
-            <a href="mailto:hello@GoodSync ERP.com" className="text-slate-900 font-bold hover:text-indigo-600 transition-colors flex items-center gap-2">
+            <a href="mailto:hello@GOODSYNK ERP.com" className="text-slate-900 font-bold hover:text-indigo-600 transition-colors flex items-center gap-2">
               <Mail className="w-4 h-4 text-slate-400" />
-              hello@GoodSync ERP.com
+              hello@GOODSYNK ERP.com
             </a>
             <a href="tel:+18001234567" className="text-slate-900 font-bold hover:text-indigo-600 transition-colors flex items-center gap-2">
               <Phone className="w-4 h-4 text-slate-400" />

@@ -35,7 +35,7 @@ const Pricing = () => {
              transition={{ delay: 0.1 }}
              className="text-2xl text-slate-400 md:px-20 font-medium leading-relaxed tracking-tight"
           >
-            Whether you run a single kindergarten or a multi-campus franchise, GoodSync ERP adapts to your operational needs.
+            Whether you run a single kindergarten or a multi-campus franchise, GOODSYNK ERP adapts to your operational needs.
           </motion.p>
         </div>
 
@@ -87,8 +87,8 @@ const Pricing = () => {
 
         <div className="text-center pt-8 text-slate-400 font-medium text-xl flex flex-col sm:flex-row items-center justify-center gap-6">
            <span>Looking for something else?</span>
-           <a href="mailto:hello@GoodSync ERP.com" className="text-white hover:text-indigo-400 transition-colors flex items-center border-b border-dashed border-white/30 hover:border-indigo-400">
-             <Mail className="w-5 h-5 mr-3" /> hello@GoodSync ERP.com
+           <a href="mailto:hello@GOODSYNK ERP.com" className="text-white hover:text-indigo-400 transition-colors flex items-center border-b border-dashed border-white/30 hover:border-indigo-400">
+             <Mail className="w-5 h-5 mr-3" /> hello@GOODSYNK ERP.com
            </a>
         </div>
       </div>

@@ -7,7 +7,7 @@ import Stats from './components/Stats'
 import Problem from './components/Problem'
 import Features from './components/Features'
 import UserRoles from './components/UserRoles'
-import WhyGoodSyncERP from './components/WhyGoodSyncERP'
+import WhyGOODSYNKERP from './components/WhyGOODSYNKERP'
 import Workflow from './components/Workflow'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
@@ -69,7 +69,7 @@ function App() {
         </SectionReveal>
 
         <SectionReveal>
-          <WhyGoodSyncERP />
+          <WhyGOODSYNKERP />
         </SectionReveal>
 
         <SectionReveal>
