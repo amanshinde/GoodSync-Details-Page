@@ -1,0 +1,487 @@
+🏫
+GudERP — School ERP ProductDocument (Investor-Ready)
+Document purpose & audience
+GudERP is a School ERP platform designed to digitize and streamline day-to-dayschool operations while improving transparency for parents and reducingadministrative load for teachers. This document is written for investors, schoolleadership, and internal product/engineering teams.
+Product overview
+Introduction to GudERP
+GudERP is a role-based School ERP system delivered through a web panel andmobile apps. It centralizes student records, attendance, academics, assignments,communication, fee operations, and institutional reporting into a unified platform.
+GudERP is built to work for a broad range of schools—from small privateinstitutions to multi-campus groups—by offering:
+A configurable structure for classes/sections/subjects
+Bulk data operations for fast onboarding
+Clear workflows for daily operations
+Parent-facing transparency and alerts
+Vision
+To become the trusted operating system for schools by providing an easy-to-adopt, reliable, and scalable platform that improves learning operations and parentengagement.
+GudERP — School ERP Product Document (Investor-Ready) 1
+Mission
+Digitize core school processes with minimal complexity.
+Improve operational efficiency for school administration and teachers.
+Provide parents with accurate, real-time visibility into attendance, academicprogress, and fees.
+Establish a secure foundation for future extensions (payments, transport,analytics, integrations).
+Problems GudERP solves
+Schools often operate with fragmented processes and inconsistent recordkeeping. GudERP addresses:
+Paper-based or spreadsheet-heavy student data and attendance
+Delayed academic reporting and manual consolidation of marks
+Inefficient assignment distribution and tracking
+Unstructured communication across admin, teachers, and parents
+Fee management complexity (structures, installments, challans, pending dues)
+High dependency on a few staff members for reporting and compliance
+Limited parent visibility leading to trust gaps and repeated follow-ups
+Key benefits
+Digitization: Central repository for student and academic records
+Transparency: Parents can view attendance, marks, and fee status withoutrepeated calls/visits
+Efficiency: Reduced manual work through bulk upload, templates, andstandardized workflows
+Accountability: Audit-friendly tracking of entries (attendance, marks, fees)
+Decision support: Reports and analytics for leadership to identify trends early
+GudERP — School ERP Product Document (Investor-Ready) 2
+Platform structure
+Delivery channels
+Web panel
+Admin (Principal/Headmaster/Office)
+Teachers (optional based on school preference)
+Mobile applications
+Teacher app (attendance, assignments, marks, messages, leave)
+Student/Parent app (attendance, results, fees, messages, SOS)
+Unified login (role-based access)
+GudERP provides a single login system that routes users to their appropriateexperience based on role:
+Admin: Full operational control
+Teacher: Class/subject-based access
+Parent/Student: View-only plus limited actions (challan download, SOS,acknowledgements)
+Access is governed by:
+Role permissions (Admin/Teacher/Parent)
+Data scope rules (class/section/subject assignment)
+Feature-level toggles (school can enable/disable modules as needed)
+Key features (detailed)
+1) Student data management (digital records)
+GudERP maintains a structured, searchable student profile for each enrolledlearner.
+Core capabilities:
+Student master profile
+GudERP — School ERP Product Document (Investor-Ready) 3
+Admission/roll number, class/section, academic year
+Student name, guardian details, contact information
+Address and emergency contact
+Optional fields: blood group, photo, transport, category, notes
+Enrollment lifecycle
+Active/inactive status and history
+Section transfers and roll number changes with traceability
+Document management (optional)
+Upload and store documents (birth certificate, transfer certificate, etc.)
+Controlled access (admin-only or as configured)
+Search and filtering
+Search by name, admission ID, class/section
+Quick filters for status, pending fees, attendance risk
+Business value:
+Creates a single source of truth across admin and teachers
+Enables faster reporting and better compliance readiness
+Screenshot placeholder: Student profile view
+2) Attendance tracking & analysis
+Attendance is designed as a daily operational workflow with reporting for bothstaff and parents.
+Core capabilities:
+Class-wise attendance marking
+Teacher marks attendance for assigned class/section
+Admin can mark/override based on policy
+Modes
+Present/Absent (and optional Late/Half-day if enabled)
+GudERP — School ERP Product Document (Investor-Ready) 4
+Notes & reasons (optional)
+Short reason tags or comments (e.g., sick leave)
+Attendance summaries
+Daily and monthly summaries
+Student-level attendance percentage
+Attendance analytics
+At-risk detection (e.g., <75% attendance)
+Patterns by class/section
+Exportable summaries for compliance
+Parent transparency:
+Real-time visibility of daily attendance
+Monthly attendance percentage
+Screenshot placeholder: Teacher attendance screen
+3) Marks & result management
+GudERP supports structured evaluation workflows from marks entry to resultpublishing.
+Core capabilities:
+Exam configuration
+Define exam types (Unit Test, Midterm, Final)
+Define subjects, max marks, passing criteria
+Marks entry
+Teacher enters marks for assigned subjects/classes
+Bulk entry grids for speed
+Validation
+Range checks (0–max marks)
+Optional moderation/approval workflow by admin
+GudERP — School ERP Product Document (Investor-Ready) 5
+Result publishing
+Publish per exam or per term
+Lock results after publishing (optional)
+Student result view
+Subject-wise marks
+Totals, percentage, grade (if configured)
+Business value:
+Eliminates manual consolidation
+Faster report cycles and fewer errors
+Screenshot placeholder: Marks entry grid
+4) Assignment management
+Assignments are created by teachers and distributed to students/parents throughthe app.
+Core capabilities:
+Assignment creation
+Title, description, subject, class/section
+Due date and attachments (PDF/image)
+Distribution
+Notify targeted class/section
+Tracking (configurable)
+Basic mode: assignment posted + due date
+Advanced mode (optional): submission tracking and status
+History and reuse
+Copy previous assignments
+Maintain assignment archive by subject
+Parent/student value:
+GudERP — School ERP Product Document (Investor-Ready) 6
+Clear visibility into homework and due dates
+Screenshot placeholder: Assignment list
+5) Communication system (Admin ↔ Teachers ↔ Parents)
+GudERP includes a structured messaging system to reduce dependence oninformal channels.
+Core capabilities:
+Admin messaging
+Broadcast to all users
+Class-wise or section-wise messaging
+Teacher-specific instructions
+Teacher messaging (optional policy)
+Communicate to assigned class/section
+Share academic updates or reminders
+Message delivery
+In-app notifications
+Read receipts (optional)
+Templates
+Predefined message templates for common announcements
+Business value:
+Centralized communication with searchable history
+Reduced miscommunication and repeated follow-ups
+Screenshot placeholder: Admin message composer
+6) Fee management system (structure, installments, challans)
+GudERP supports fee setup and systematic tracking of dues at student/class level.
+Core capabilities:
+GudERP — School ERP Product Document (Investor-Ready) 7
+Fee structure configuration
+Class-wise fee components (tuition, lab, transport, etc.)
+One-time, monthly, quarterly, annual components
+Installment planning
+Define installment schedule (e.g., 3-term or monthly)
+Automatic calculation of installment amounts
+Challan generation
+Generate printable challans/fee slips
+Student-wise and class-wise generation
+Optional late fee rules (if enabled)
+Fee status tracking
+Paid / pending / overdue status
+Student fee ledger view
+Reporting
+Collection reports
+Outstanding dues by class/section
+Export for accounts and reconciliation
+Parent transparency:
+Current dues, paid history, upcoming installment dates
+Ability to download challan anytime
+Screenshot placeholder: Fee structure setup + challan
+7) ID card generation (multiple templates)
+GudERP can generate standardized ID cards for students and optionally staff.
+Core capabilities:
+Multiple templates
+GudERP — School ERP Product Document (Investor-Ready) 8
+Different templates by grade or campus
+School branding: logo, colors, layout
+Data merge
+Auto-populate student photo, name, class/section, admission ID
+Batch generation
+Generate for selected class/section or all
+Output formats
+Printable layouts suitable for card printing vendors
+Operational value:
+Eliminates manual design per student
+Standardizes identity cards across school
+Screenshot placeholder: ID card template selector
+8) Hall ticket generation
+GudERP generates hall tickets (admit cards) for exams with consistent formatting.
+Core capabilities:
+Exam-wise hall ticket templates
+Student details + exam schedule integration (if enabled)
+Batch generation by class/section
+Optional rules
+Block generation for pending dues (policy-driven)
+Admin approval before release
+Screenshot placeholder: Hall ticket preview
+9) Reports & analytics dashboard
+GudERP includes dashboards to help admin make informed decisions quickly.
+Core capabilities:
+GudERP — School ERP Product Document (Investor-Ready) 9
+Attendance analytics
+Daily attendance trend
+Monthly attendance by class
+At-risk student lists
+Academic analytics
+Subject-wise performance distribution
+Class-wise averages
+Identify top/bottom trends (policy-based)
+Fee analytics
+Outstanding dues summary
+Collection trends by installment
+Exports
+CSV/Excel exports for compliance and auditing
+Investor-ready value:
+Demonstrates measurable outcomes: attendance improvement, fasterreporting cycles, better collections visibility
+Screenshot placeholder: Analytics dashboard
+10) Parent transparency features
+GudERP is designed to reduce parent-school friction with self-service visibility.
+Key transparency surfaces:
+Attendance view
+Daily and monthly summary
+Absence history
+Marks and results
+Exam-wise results
+Subject-level breakup
+GudERP — School ERP Product Document (Investor-Ready) 10
+Fee view
+Dues, paid history, challan download
+Communication
+Announcements and messages archive
+Outcome:
+Reduced parent follow-ups
+Increased trust due to consistent, official data access
+Screenshot placeholder: Parent app home
+11) SOS alert feature
+The SOS feature provides an emergency escalation mechanism for student safety.
+Core capabilities:
+Trigger SOS from parent/student app
+Single-tap emergency alert
+Optional reason selection (medical, safety, other)
+Escalation routing
+Notifies designated school contacts (admin, safety officer, class teacher)
+Captures timestamp and student identity
+Audit log
+Records trigger history for review
+Optional enhancements
+Location capture (with consent)
+Call shortcut to emergency contacts
+Business value:
+Safety-first positioning
+Differentiates GudERP in parent trust and compliance narratives
+GudERP — School ERP Product Document (Investor-Ready) 11
+Screenshot placeholder: SOS screen
+User roles & access control
+GudERP uses strict role-based access control (RBAC) to ensure data privacy,correct operational separation, and accountability.
+Admin (Principal/Headmaster/School office)
+Admin is the system owner at the school level.
+Key capabilities:
+School setup & configuration
+Create academic years
+Add classes, sections, and subjects
+Configure grading/exam settings
+Bulk upload of students and teachers
+Upload via Excel/CSV templates
+Validate duplicates and missing required fields
+Bulk update support (where permitted)
+Teacher assignment
+Assign teachers to subjects
+Assign class teacher responsibilities
+Attendance management
+View and manage attendance across all classes
+Override attendance entries (policy-based)
+Monitor at-risk attendance
+Assignment oversight
+Track assignment creation by teachers
+Monitor overdue assignments (optional)
+GudERP — School ERP Product Document (Investor-Ready) 12
+Marks entry & result publishing
+Enable/lock mark entry windows
+Approve or publish results
+Manage correction workflows
+Messaging system
+Send messages to:
+All users
+Teachers only
+Students/parents by class/section
+Individual users
+Message templates and scheduled announcements (optional)
+Fee operations
+Setup fee structure class-wise
+Setup installments and due dates
+Generate challans (student-wise/class-wise)
+View dues and collection reports
+Reports & analytics
+Export attendance, academic, and fee reports
+Dashboard monitoring
+ID card and hall ticket generation
+Manage templates
+Batch generate printable output
+Controls and governance:
+School-defined policies (attendance rules, publishing approvals)
+Audit trails for sensitive operations (recommended)
+GudERP — School ERP Product Document (Investor-Ready) 13
+Teacher (Web + Mobile)
+Teacher access is scoped to assigned classes/sections/subjects.
+Key capabilities:
+Dashboard overview
+Today’s classes/sections (if configured)
+Pending attendance
+Assignments due and recent messages
+Attendance marking
+Mark attendance class-wise
+Correct attendance within allowed time window
+Assignment creation and tracking
+Create assignments for assigned subjects
+Attach supporting material
+Track status (if submission tracking enabled)
+Marks entry
+Enter marks for assigned exams/subjects
+Review previous marks entries
+View admin messages
+Important announcements
+Policy updates and schedules
+Leave application & tracking
+Submit leave request
+View approval status (if leave module is enabled)
+Access student details
+View student list for assigned classes
+View student profiles (limited fields per policy)
+GudERP — School ERP Product Document (Investor-Ready) 14
+Student / Parent (Mobile App only)
+Parent and student access is designed for clarity, transparency, and ease of use.
+Key capabilities:
+View attendance
+Daily status and monthly summary
+Absence history
+View marks/results
+Exam/term results after publishing
+Subject-wise marks breakdown
+Student profile details
+Key student information
+Class/section and academic year details
+School information
+Announcements, academic calendar (if enabled)
+Contact details and school policies (optional)
+Fee details and challan generation
+View dues and paid history
+Download challans
+SOS emergency alert
+Trigger SOS as per safety policy
+Workflow overview (end-to-end)
+1) School onboarding
+School admin account creation
+Basic school profile setup
+GudERP — School ERP Product Document (Investor-Ready) 15
+Module enablement based on school needs (fees, assignments, hall tickets,etc.)
+2) Data setup
+Create academic year
+Add classes, sections, and subjects
+Bulk upload:
+Teachers
+Students
+Assign teachers to subjects and class responsibilities
+Configure:
+Attendance rules
+Exam structures and grading (if applicable)
+Fee structure and installment plan
+3) Daily operations
+Attendance
+Teachers mark attendance daily
+Admin monitors completion and trends
+Assignments
+Teachers create and publish assignments
+Students/parents view assignments and due dates
+Communication
+Admin shares announcements
+Teachers share class updates (if enabled)
+4) Evaluation cycle (marks and results)
+Admin creates exam/term settings
+GudERP — School ERP Product Document (Investor-Ready) 16
+Teachers enter marks
+Admin reviews, approves, and publishes results
+Parents/students view results immediately after publishing
+5) Parent engagement & transparency
+Parents track attendance and academic progress
+Parents view fee dues and download challans
+Parents receive official communication via the app
+SOS feature enables emergency escalation when required
+Unique selling points (USP)
+End-to-end school digitization
+GudERP covers the most operationally critical workflows in a single platform,reducing tool sprawl and manual consolidation.
+High transparency for parents
+Parent-facing visibility into attendance, marks/results, and fee status improvestrust and reduces front-office load.
+Multi-role integrated system
+Admin, teacher, and parent experiences are connected through shared datamodels and controlled workflows.
+Bulk data management
+Bulk upload and batch operations allow fast onboarding and efficientadministration at scale.
+Simple and scalable architecture
+Designed to work for single schools and expand to multiple campuses and futureintegrations without rewriting core workflows.
+GudERP — School ERP Product Document (Investor-Ready) 17
+Benefits
+For schools (management & administration)
+Faster onboarding and consistent data management
+Reduced paper work and repetitive manual reporting
+Improved compliance readiness with exports and structured records
+Better visibility into attendance and academic trends
+More predictable fee operations and clearer outstanding tracking
+For teachers
+Faster daily attendance workflow
+Simple assignment distribution to the whole class
+Structured marks entry and reduced result compilation work
+Centralized communication and reduced coordination overhead
+For parents
+Always-on transparency for attendance, results, and fees
+Reduced need for calls/visits to check routine information
+Official communication channel separate from informal messaging apps
+Added safety confidence with SOS emergency alerts
+For students
+Clear understanding of assignments and academic progress
+Consistent access to results and school announcements
+Improved support through early intervention (attendance/performanceinsights)
+Future scope (optional enhancements)
+GudERP — School ERP Product Document (Investor-Ready) 18
+Online fee payment integration
+Integrate with payment gateways (UPI/cards/netbanking)
+Auto-reconcile payments into fee ledger
+Generate receipts and payment confirmations
+AI-based performance analytics
+Early risk prediction for learning outcomes based on attendance + markstrends
+Personalized improvement insights for teachers and parents
+Automated class/subject performance summaries
+Transport tracking
+Bus route management
+Live tracking and ETA alerts
+Attendance-on-bus
+Exam analytics dashboards
+Deeper subject-level insights
+Question/topic-level analysis (if assessment structure supports it)
+Comparative analytics across terms
+Additional extensions (optional)
+Timetable and substitution management
+Library management
+Inventory and procurement
+Staff payroll and HR workflows
+Integration with SMS/WhatsApp (policy-based) for critical alerts
+GudERP — School ERP Product Document (Investor-Ready) 19
+Security, privacy, and compliance (recommendedsection)
+GudERP is designed to protect student data and school operations.
+Recommended controls:
+Role-based permissions (RBAC) with least-privilege defaults
+Secure authentication (OTP/password + device controls as applicable)
+Encryption in transit (HTTPS) and secure storage practices
+Audit logs for sensitive actions (marks publishing, fee changes, adminoverrides)
+Data retention policies and export on request
+Appendix
+A) Screenshot placeholders checklist
+Student profile
+Teacher attendance
+Marks entry
+Assignment module
+Admin message composer
+Fee structure & challan
+ID card templates
+Hall ticket preview
+Reports/analytics dashboard
+Parent app home
+SOS alert
+B) Glossary
+GudERP — School ERP Product Document (Investor-Ready) 20
+ERP: Enterprise Resource Planning (here, a system to manage core schooloperations)
+Challan: Printable fee slip used for fee payment
+RBAC: Role-Based Access Control
+GudERP — School ERP Product Document (Investor-Ready) 21
