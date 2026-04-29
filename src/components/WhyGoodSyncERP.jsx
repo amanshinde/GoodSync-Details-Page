@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ShieldCheck, Network, Settings, LayoutDashboard, Layers, ArrowRight } from 'lucide-react';
 
@@ -24,7 +24,7 @@ const USPItem = ({ icon: Icon, title, desc, index }) => (
   </motion.div>
 );
 
-const WhyGoodSync ERP = () => {
+const WhyGoodSyncERP = () => {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
@@ -105,4 +105,4 @@ const WhyGoodSync ERP = () => {
   );
 };
 
-export default WhyGoodSync ERP;
+export default WhyGoodSyncERP;
