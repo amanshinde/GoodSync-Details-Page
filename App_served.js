@@ -1,4 +1,4 @@
-﻿import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/App.jsx?t=1234567896");import __vite__cjsImport0_react from "/node_modules/.vite/deps/react.js?v=14c89c50"; const React = __vite__cjsImport0_react;
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/App.jsx?t=1234567896");import __vite__cjsImport0_react from "/node_modules/.vite/deps/react.js?v=14c89c50"; const React = __vite__cjsImport0_react;
 import HealthCheck from "/src/components/HealthCheck.jsx";
 var _jsxFileName = "C:/Users/dell/GoodSync ERP/src/App.jsx?t=1234567896";
 import __vite__cjsImport2_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=14c89c50"; const _jsxDEV = __vite__cjsImport2_react_jsxDevRuntime["jsxDEV"];

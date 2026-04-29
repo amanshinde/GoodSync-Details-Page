@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, ArrowRight, Building2, CheckCircle2 } from 'lucide-react';
 

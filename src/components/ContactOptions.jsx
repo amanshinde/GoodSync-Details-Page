@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MessageSquare, ArrowRight, Sparkles, Headphones, GraduationCap } from 'lucide-react';

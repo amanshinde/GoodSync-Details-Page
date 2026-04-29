@@ -1,4 +1,4 @@
-﻿import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import AmbientBackground from './AmbientBackground';
 import HeroUI from './HeroUI';
 import { HandDrawnUnderline } from './SchoolScribbles';

@@ -1,4 +1,4 @@
-﻿import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 import AmbientBackground from './AmbientBackground';
 import { HandDrawnCircle } from './SchoolScribbles';
 import { Link } from 'react-router-dom';

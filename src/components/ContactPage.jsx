@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Building } from 'lucide-react';
 import AmbientBackground from './AmbientBackground';

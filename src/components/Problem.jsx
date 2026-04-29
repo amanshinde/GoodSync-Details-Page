@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 import AmbientBackground from './AmbientBackground';
 import { AlertTriangle, Clock, EyeOff, Ban, CloudOff, Users, FileX } from 'lucide-react';

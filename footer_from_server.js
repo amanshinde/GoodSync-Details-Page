@@ -1,4 +1,4 @@
-﻿import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Footer.jsx?t=1234567892");import __vite__cjsImport0_react from "/node_modules/.vite/deps/react.js?v=65cb84b1"; const React = __vite__cjsImport0_react;
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Footer.jsx?t=1234567892");import __vite__cjsImport0_react from "/node_modules/.vite/deps/react.js?v=65cb84b1"; const React = __vite__cjsImport0_react;
 import { motion } from "/node_modules/.vite/deps/framer-motion.js?v=65cb84b1";
 import { Mail, Phone, Globe, Send, ExternalLink, ChevronRight, Rocket, Shield } from "/node_modules/.vite/deps/lucide-react.js?v=65cb84b1";
 var _jsxFileName = "C:/Users/dell/GoodSync ERP/src/components/Footer.jsx?t=1234567892";

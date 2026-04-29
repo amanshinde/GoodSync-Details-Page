@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Globe, Shield, Rocket, ChevronRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
