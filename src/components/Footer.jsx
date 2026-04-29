@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Globe, Shield, Rocket, ChevronRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -66,7 +66,7 @@ const Footer = () => {
               <div className="space-y-4">
                 <FooterLink to="/features">Feature Hub</FooterLink>
                 <FooterLink to="/roles">User Roles</FooterLink>
-                <FooterLink href="/#why-guderp">Why GudERP</FooterLink>
+                <FooterLink href="/#why-goodsync-erp">Why GoodSync ERP</FooterLink>
                 <FooterLink href="/#workflow">How It Works</FooterLink>
               </div>
             </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-slate-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 group">
             <p className="text-lg font-bold text-slate-500 flex flex-wrap items-center justify-center md:justify-start gap-1">
-              © 2026 GudERP.
+              © 2026 GoodSync ERP.
             </p>
             <div className="flex items-center gap-6">
               <span className="flex items-center gap-2 text-sm font-bold text-slate-400 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">

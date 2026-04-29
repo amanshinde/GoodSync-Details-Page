@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
+﻿import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import AmbientBackground from './AmbientBackground';
 import HeroUI from './HeroUI';
 import { HandDrawnUnderline } from './SchoolScribbles';
@@ -60,7 +60,7 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-slate-500 max-w-4xl mx-auto font-medium leading-relaxed tracking-tight">
               Digitize core school processes. Improve operational efficiency for administration & teachers. <br className="hidden md:block" />
               Give parents real-time visibility into attendance, academics & fees — with{' '}
-              <span className="font-extrabold text-slate-900 border-b-4 border-indigo-600/40 pb-1">GudERP.</span>
+              <span className="font-extrabold text-slate-900 border-b-4 border-indigo-600/40 pb-1">GoodSync ERP.</span>
             </p>
           </div>
 

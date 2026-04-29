@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
@@ -16,7 +16,7 @@ const ALL_ROLES = [
     color: 'indigo',
     title: 'Admin User',
     tagline: 'Complete operational control across the school.',
-    desc: 'Admins have the highest level of access in GudERP. They manage school setup, bulk operations, evaluate performance metrics, oversee daily attendance, and publish results.',
+    desc: 'Admins have the highest level of access in GoodSync ERP. They manage school setup, bulk operations, evaluate performance metrics, oversee daily attendance, and publish results.',
     device: 'Web Panel',
     deviceIcon: MonitorSmartphone,
     highlights: [

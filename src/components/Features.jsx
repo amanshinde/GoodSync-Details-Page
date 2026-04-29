@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence, useMotionValue, useMotionTemplate } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import AmbientBackground from './AmbientBackground';
@@ -187,7 +187,7 @@ const Features = () => {
              transition={{ delay: 0.1 }}
              className="text-2xl text-slate-500 md:px-20 font-medium leading-relaxed tracking-tight"
           >
-            GudERP covers every operationally critical workflow in a single platform — from student records to SOS alerts — eliminating tool sprawl and manual work.
+            GoodSync ERP covers every operationally critical workflow in a single platform — from student records to SOS alerts — eliminating tool sprawl and manual work.
           </motion.p>
         </div>
 

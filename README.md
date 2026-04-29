@@ -1,6 +1,6 @@
-# GudERP - Modern ERP Solution
+﻿# GoodSync ERP - Modern ERP Solution
 
-A sleek, responsive, and premium landing page for **GudERP**, a comprehensive Enterprise Resource Planning solution. Built with modern web technologies to provide an exceptional user experience.
+A sleek, responsive, and premium landing page for **GoodSync ERP**, a comprehensive Enterprise Resource Planning solution. Built with modern web technologies to provide an exceptional user experience.
 
 ## 🚀 Features
 

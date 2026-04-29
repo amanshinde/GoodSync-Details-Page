@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'
 import Navbar from './components/Navbar'
@@ -7,7 +7,7 @@ import Stats from './components/Stats'
 import Problem from './components/Problem'
 import Features from './components/Features'
 import UserRoles from './components/UserRoles'
-import WhyGudERP from './components/WhyGudERP'
+import WhyGoodSync ERP from './components/WhyGoodSync ERP'
 import Workflow from './components/Workflow'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
@@ -69,7 +69,7 @@ function App() {
         </SectionReveal>
 
         <SectionReveal>
-          <WhyGudERP />
+          <WhyGoodSync ERP />
         </SectionReveal>
 
         <SectionReveal>

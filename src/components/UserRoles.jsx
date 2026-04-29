@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+﻿import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
 import AmbientBackground from './AmbientBackground';
 import { HandDrawnCircle } from './SchoolScribbles';
 import { Link } from 'react-router-dom';
@@ -134,7 +134,7 @@ const UserRoles = () => {
              transition={{ delay: 0.1 }}
              className="text-2xl text-slate-500 md:px-20 font-medium leading-relaxed tracking-tight"
           >
-            GudERP uses strict Role-Based Access Control (RBAC) to give every user exactly the tools they need — and nothing they don't.
+            GoodSync ERP uses strict Role-Based Access Control (RBAC) to give every user exactly the tools they need — and nothing they don't.
           </motion.p>
         </div>
 
