@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import MainNavbar from '../components/MainNavbar';
 import MainFooter from '../components/MainFooter';
+import AmbientBackground from '../../goodsynk-erp/components/AmbientBackground';
 
 const PRODUCTS = [
   {
@@ -110,10 +111,7 @@ const AllProductsPage = () => {
 
       {/* Header */}
       <section className="relative pt-36 pb-20 px-4 text-center overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-200/50 rounded-full blur-[100px]" />
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-violet-200/50 rounded-full blur-[100px]" />
-        </div>
+        <AmbientBackground showIcons={false} />
         <div className="relative z-10 max-w-4xl mx-auto">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -129,7 +127,7 @@ const AllProductsPage = () => {
             className="text-5xl md:text-7xl font-black font-outfit tracking-tight mb-6 text-slate-900"
           >
             Everything{' '}
-            <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent">
               Goodsync
             </span>{' '}
             Builds
@@ -175,9 +173,11 @@ const AllProductsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className={`group relative rounded-3xl border border-slate-200 bg-white hover:bg-slate-50/50 p-8 md:p-10 transition-all duration-500 shadow-sm hover:shadow-xl ${c.glow} overflow-hidden`}
+                className={`group relative rounded-3xl border border-slate-200 bg-white hover:bg-slate-50/50 p-8 md:p-10 transition-all duration-500 shadow-sm hover:shadow-2xl hover:-translate-y-2 ${c.glow} overflow-hidden`}
               >
-                <div className="flex flex-col lg:flex-row gap-8">
+                {/* Hover Background Gradient */}
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-transparent to-${product.color}-50/50 transition-opacity duration-500`} />
+                <div className="relative z-10 flex flex-col lg:flex-row gap-8">
                   {/* Left */}
                   <div className="flex-1">
                     <div className="flex items-start gap-5 mb-6">

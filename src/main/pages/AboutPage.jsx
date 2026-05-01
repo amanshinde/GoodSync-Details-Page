@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Zap } from 'lucide-react';
 import MainNavbar from '../components/MainNavbar';
 import MainFooter from '../components/MainFooter';
+import AmbientBackground from '../../goodsynk-erp/components/AmbientBackground';
 
 const VALUES = [
   { icon: Target, title: 'Precision', desc: 'Every feature is intentional. No bloat, no filler — just exactly what your operation needs.' },
@@ -27,10 +28,7 @@ const AboutPage = () => (
 
     {/* Hero */}
     <section className="relative pt-36 pb-24 px-4 overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-indigo-200/50 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-violet-200/50 rounded-full blur-[120px]" />
-      </div>
+      <AmbientBackground showIcons={false} />
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
@@ -46,7 +44,7 @@ const AboutPage = () => (
           className="text-5xl md:text-7xl font-black font-outfit tracking-tight mb-8 text-slate-900"
         >
           We Build Software{' '}
-          <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent">
             That Matters
           </span>
         </motion.h1>
@@ -88,11 +86,14 @@ const AboutPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`rounded-3xl ${item.color} border ${item.border} p-10 shadow-sm`}
+            className={`group relative rounded-3xl ${item.color} border ${item.border} p-10 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden`}
           >
-            <span className={`text-xs font-black ${item.labelColor} uppercase tracking-[0.2em] mb-4 block`}>{item.label}</span>
-            <h2 className="text-3xl font-black font-outfit mb-4 text-slate-900">{item.title}</h2>
-            <p className="text-slate-500 font-medium leading-relaxed">{item.desc}</p>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-transparent to-slate-100/50 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <span className={`text-xs font-black ${item.labelColor} uppercase tracking-[0.2em] mb-4 block`}>{item.label}</span>
+              <h2 className="text-3xl font-black font-outfit mb-4 text-slate-900 group-hover:text-indigo-600 transition-colors">{item.title}</h2>
+              <p className="text-slate-500 font-medium leading-relaxed">{item.desc}</p>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -120,13 +121,16 @@ const AboutPage = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="bg-white border border-slate-200 shadow-sm rounded-3xl p-8 hover:border-indigo-200 hover:shadow-lg transition-all"
+                className="group relative bg-white border border-slate-200 shadow-sm rounded-3xl p-8 hover:border-indigo-300 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
               >
-                <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 rounded-2xl flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6 text-indigo-600" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-indigo-50/30 to-violet-50/30 transition-opacity duration-300" />
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <Icon className="w-6 h-6 text-indigo-600" />
+                  </div>
+                  <h3 className="text-lg font-black text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">{v.title}</h3>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed">{v.desc}</p>
                 </div>
-                <h3 className="text-lg font-black text-slate-900 mb-2">{v.title}</h3>
-                <p className="text-slate-500 text-sm font-medium leading-relaxed">{v.desc}</p>
               </motion.div>
             );
           })}
@@ -161,10 +165,13 @@ const AboutPage = () => (
                 <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 border-4 border-white relative z-10 shadow-sm">
                   <div className="w-2 h-2 bg-white rounded-full" />
                 </div>
-                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 flex-1 hover:border-indigo-200 transition-colors">
-                  <span className="text-indigo-600 font-black text-xs uppercase tracking-widest">{m.year}</span>
-                  <h3 className="text-xl font-black text-slate-900 mt-1 mb-2">{m.title}</h3>
-                  <p className="text-slate-500 font-medium text-sm leading-relaxed">{m.desc}</p>
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 flex-1 hover:border-indigo-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10">
+                    <span className="text-indigo-600 font-black text-xs uppercase tracking-widest">{m.year}</span>
+                    <h3 className="text-xl font-black text-slate-900 mt-1 mb-2 group-hover:text-indigo-600 transition-colors">{m.title}</h3>
+                    <p className="text-slate-500 font-medium text-sm leading-relaxed">{m.desc}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -182,10 +189,15 @@ const AboutPage = () => (
           viewport={{ once: true }}
           className="text-center rounded-3xl bg-gradient-to-br from-indigo-600 to-violet-700 p-12 relative overflow-hidden shadow-2xl shadow-indigo-200"
         >
-          <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-            backgroundSize: '24px 24px'
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: 'radial-gradient(circle at 30% 50%, white 1px, transparent 1px), radial-gradient(circle at 70% 80%, white 1.5px, transparent 1.5px)',
+            backgroundSize: '30px 30px, 40px 40px'
           }} />
+          <motion.div 
+            animate={{ x: [-20, 20, -20], y: [-20, 20, -20] }} 
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none" 
+          />
           <div className="relative z-10">
             <h2 className="text-3xl font-black font-outfit mb-4 text-white">Join the Goodsync Journey</h2>
             <p className="text-white/80 font-medium mb-8">We're building the future of business software. Be among the first.</p>

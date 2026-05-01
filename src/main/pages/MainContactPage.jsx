@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowRight, MessageSquare, Clock, Globe } from 'lucide-react';
 import MainNavbar from '../components/MainNavbar';
 import MainFooter from '../components/MainFooter';
+import AmbientBackground from '../../goodsynk-erp/components/AmbientBackground';
 
 const CONTACT_OPTIONS = [
   {
@@ -54,10 +55,7 @@ const MainContactPage = () => {
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 px-4 text-center overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/3 w-80 h-80 bg-indigo-200/50 rounded-full blur-[100px]" />
-          <div className="absolute top-0 right-1/3 w-80 h-80 bg-violet-200/50 rounded-full blur-[100px]" />
-        </div>
+        <AmbientBackground showIcons={false} />
         <div className="relative z-10 max-w-3xl mx-auto">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -73,7 +71,7 @@ const MainContactPage = () => {
             className="text-5xl md:text-7xl font-black font-outfit tracking-tight mb-6 text-slate-900"
           >
             Let's{' '}
-            <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent">
               Talk
             </span>
           </motion.h1>
@@ -103,14 +101,17 @@ const MainContactPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`group rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-md p-8 hover:scale-[1.02] transition-all block`}
+                className={`group relative rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 p-8 transition-all duration-300 block overflow-hidden`}
               >
-                <div className={`w-12 h-12 rounded-2xl ${c.bg} border ${c.border} flex items-center justify-center mb-5`}>
-                  <Icon className={`w-6 h-6 ${c.icon}`} />
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-transparent to-${opt.color}-50/50 transition-opacity duration-300`} />
+                <div className="relative z-10">
+                  <div className={`w-12 h-12 rounded-2xl ${c.bg} border ${c.border} flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}>
+                    <Icon className={`w-6 h-6 ${c.icon}`} />
+                  </div>
+                  <h3 className="text-lg font-black text-slate-900 mb-1 group-hover:text-indigo-600 transition-colors">{opt.title}</h3>
+                  <p className="text-slate-500 text-sm font-medium mb-3">{opt.desc}</p>
+                  <p className={`text-sm font-bold ${c.icon} group-hover:underline`}>{opt.value}</p>
                 </div>
-                <h3 className="text-lg font-black text-slate-900 mb-1">{opt.title}</h3>
-                <p className="text-slate-500 text-sm font-medium mb-3">{opt.desc}</p>
-                <p className={`text-sm font-bold ${c.icon} group-hover:underline`}>{opt.value}</p>
               </motion.a>
             );
           })}
@@ -230,19 +231,7 @@ const MainContactPage = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-indigo-50 to-violet-50 border border-indigo-100 rounded-3xl p-8">
-              <h3 className="text-xl font-black font-outfit mb-3 text-slate-900">Looking for GOODSYNK ERP?</h3>
-              <p className="text-slate-600 text-sm font-medium mb-5">
-                Our school management product is live and serving 500+ schools. Request a demo or sign in today.
-              </p>
-              <Link
-                to="/goodsynk-erp"
-                className="group inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-800 px-5 py-3 rounded-xl font-bold text-sm hover:bg-slate-50 transition-all shadow-sm"
-              >
-                View GOODSYNK ERP
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+
           </motion.div>
         </div>
       </section>

@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import MainNavbar from '../components/MainNavbar';
 import MainFooter from '../components/MainFooter';
+import AmbientBackground from '../../goodsynk-erp/components/AmbientBackground';
 
 const PRODUCTS = [
   {
@@ -93,18 +94,7 @@ const MainHome = () => (
 
     {/* ── HERO ── */}
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-      {/* Background orbs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-200/50 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-200/50 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-50/80 rounded-full blur-[80px]" />
-      </div>
-
-      {/* Grid pattern */}
-      <div className="absolute inset-0 opacity-[0.4]" style={{
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)',
-        backgroundSize: '60px 60px'
-      }} />
+      <AmbientBackground showIcons={false} />
 
       <div className="relative z-10 text-center max-w-5xl mx-auto pt-24">
         <motion.div
@@ -125,7 +115,7 @@ const MainHome = () => (
           <img
             src="/goodsynk.png"
             alt="Goodsync"
-            className="h-20 md:h-28 w-auto object-contain mx-auto mb-10 drop-shadow-sm"
+            className="h-20 md:h-18 w-auto object-contain mx-auto mb-10 drop-shadow-sm"
           />
         </motion.div>
 
@@ -136,7 +126,7 @@ const MainHome = () => (
           className="text-4xl md:text-6xl lg:text-7xl font-black font-outfit tracking-tight leading-tight mb-6 text-slate-900"
         >
           Software That Works{' '}
-          <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent">
             As Hard As You Do
           </span>
         </motion.h1>
@@ -216,48 +206,52 @@ const MainHome = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className={`group relative rounded-3xl border border-slate-200 bg-white hover:bg-slate-50/50 p-8 transition-all duration-500 shadow-sm hover:shadow-xl ${c.glow} overflow-hidden`}
+                className={`group relative rounded-3xl border border-slate-200 bg-white hover:bg-slate-50/50 p-8 transition-all duration-500 shadow-sm hover:shadow-2xl hover:-translate-y-2 ${c.glow} overflow-hidden`}
               >
-                {/* Live badge */}
-                {product.status === 'live' && (
-                  <div className="absolute top-6 right-6 flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-600 text-xs font-black px-3 py-1 rounded-full">
-                    <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-                    Live
-                  </div>
-                )}
-                {product.status === 'coming' && (
-                  <div className="absolute top-6 right-6 bg-slate-100 border border-slate-200 text-slate-500 text-xs font-black px-3 py-1 rounded-full">
-                    Coming Soon
-                  </div>
-                )}
-
-                <div className={`w-14 h-14 rounded-2xl ${c.bg} border ${c.border} flex items-center justify-center mb-6`}>
-                  <Icon className={`w-7 h-7 ${c.icon}`} />
-                </div>
-
-                <h3 className="text-xl font-black text-slate-900 font-outfit mb-2 group-hover:text-indigo-600 transition-colors">{product.name}</h3>
-                <p className={`text-sm font-bold ${c.icon} mb-3`}>{product.tagline}</p>
-                <p className="text-slate-500 text-sm font-medium leading-relaxed mb-6">{product.desc}</p>
-
-                {product.status === 'live' ? (
-                  <Link
-                    to={product.to}
-                    className={`inline-flex items-center gap-2 ${c.bg} border ${c.border} ${c.icon} px-5 py-2.5 rounded-xl text-sm font-black hover:scale-105 transition-all`}
-                  >
-                    View Product <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                ) : (
-                  <div>
-                    <span className="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 text-slate-500 px-5 py-2.5 rounded-xl text-sm font-bold">
+                {/* Hover gradient background effect */}
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-transparent to-${product.color}-50/50 transition-opacity duration-500`} />
+                <div className="relative z-10">
+                  {/* Live badge */}
+                  {product.status === 'live' && (
+                    <div className="absolute top-6 right-6 flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-600 text-xs font-black px-3 py-1 rounded-full">
+                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                      Live
+                    </div>
+                  )}
+                  {product.status === 'coming' && (
+                    <div className="absolute top-6 right-6 bg-slate-100 border border-slate-200 text-slate-500 text-xs font-black px-3 py-1 rounded-full">
                       Coming Soon
-                    </span>
-                    {product.cta && (
-                      <Link to="/main-contact" className="block mt-2 text-xs text-slate-500 hover:text-indigo-600 transition-colors font-medium">
-                        {product.cta} →
-                      </Link>
-                    )}
+                    </div>
+                  )}
+
+                  <div className={`w-14 h-14 rounded-2xl ${c.bg} border ${c.border} flex items-center justify-center mb-6`}>
+                    <Icon className={`w-7 h-7 ${c.icon}`} />
                   </div>
-                )}
+
+                  <h3 className="text-xl font-black text-slate-900 font-outfit mb-2 group-hover:text-indigo-600 transition-colors">{product.name}</h3>
+                  <p className={`text-sm font-bold ${c.icon} mb-3`}>{product.tagline}</p>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed mb-6">{product.desc}</p>
+
+                  {product.status === 'live' ? (
+                    <Link
+                      to={product.to}
+                      className={`inline-flex items-center gap-2 ${c.bg} border ${c.border} ${c.icon} px-5 py-2.5 rounded-xl text-sm font-black hover:scale-105 transition-all`}
+                    >
+                      View Product <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  ) : (
+                    <div>
+                      <span className="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 text-slate-500 px-5 py-2.5 rounded-xl text-sm font-bold">
+                        Coming Soon
+                      </span>
+                      {product.cta && (
+                        <Link to="/main-contact" className="block mt-2 text-xs text-slate-500 hover:text-indigo-600 transition-colors font-medium">
+                          {product.cta} →
+                        </Link>
+                      )}
+                    </div>
+                  )}
+                </div>
               </motion.div>
             );
           })}
@@ -305,9 +299,9 @@ const MainHome = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-white border border-slate-200 shadow-sm rounded-3xl p-8 hover:border-indigo-200 hover:shadow-lg transition-all"
+                className="group bg-white border border-slate-200 shadow-sm rounded-3xl p-8 hover:border-indigo-300 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
                   <Icon className="w-6 h-6 text-indigo-600" />
                 </div>
                 <h3 className="text-lg font-black text-slate-900 mb-2">{item.title}</h3>
@@ -328,10 +322,15 @@ const MainHome = () => (
           viewport={{ once: true }}
           className="relative rounded-3xl bg-gradient-to-br from-indigo-600 to-violet-700 p-12 md:p-16 text-center overflow-hidden shadow-2xl shadow-indigo-200"
         >
-          <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: 'radial-gradient(circle at 30% 50%, white 1px, transparent 1px)',
-            backgroundSize: '30px 30px'
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: 'radial-gradient(circle at 30% 50%, white 1px, transparent 1px), radial-gradient(circle at 70% 80%, white 1.5px, transparent 1.5px)',
+            backgroundSize: '30px 30px, 40px 40px'
           }} />
+          <motion.div
+            animate={{ x: [-20, 20, -20], y: [-20, 20, -20] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"
+          />
           <div className="relative z-10">
             <h2 className="text-3xl md:text-5xl font-black font-outfit mb-6 text-white">
               Ready to Transform Your Operations?

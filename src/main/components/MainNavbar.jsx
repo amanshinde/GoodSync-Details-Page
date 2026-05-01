@@ -57,25 +57,7 @@ const MainNavbar = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="https://goodsync-8x4v.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base font-black text-slate-600 hover:text-indigo-600 transition-colors tracking-tight"
-            >
-              Sign In
-            </a>
-            <Link
-              to="/products"
-              className="group relative bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-6 py-2.5 rounded-xl font-black text-base shadow-xl shadow-indigo-200 flex items-center space-x-2 hover:scale-105 transition-all active:scale-95 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-              <span>View Products</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+
 
           {/* Mobile Toggle */}
           <div className="lg:hidden">
