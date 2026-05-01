@@ -87,7 +87,7 @@ const MainContactPage = () => {
       </section>
 
       {/* Contact Options */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pb-16 pt-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {CONTACT_OPTIONS.map((opt, i) => {
             const c = colorMap[opt.color];

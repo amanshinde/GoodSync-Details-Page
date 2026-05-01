@@ -102,7 +102,7 @@ const MainHome = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-8">
+          <span className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-3">
             <Sparkles className="w-3.5 h-3.5" /> One Brand. Every Business Solution.
           </span>
         </motion.div>
@@ -113,9 +113,9 @@ const MainHome = () => (
           transition={{ duration: 0.7, delay: 0.1 }}
         >
           <img
-            src="/goodsynk.png"
+            src="/fulllogocolor.png"
             alt="Goodsync"
-            className="h-20 md:h-18 w-auto object-contain mx-auto mb-10 drop-shadow-sm"
+            className="h-30 md:h-70 w-auto object-contain mx-auto mb-3 drop-shadow-sm"
           />
         </motion.div>
 
