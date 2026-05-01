@@ -18,14 +18,14 @@ const PRODUCTS = [
     desc: 'An all-in-one school ERP covering student data, attendance, marks, fees, communication, ID cards, hall tickets, and deep reporting. Used by 500+ schools with 2,000+ daily active users.',
     status: 'live',
     color: 'indigo',
-    to: '/goodsynk-erp',
+    to: '/erp',
     features: ['Student & Staff Management', 'Attendance & Results', 'Fee Collection', 'ID Card Generation', 'Hall Tickets', 'Parent Transparency App', 'RBAC Security', 'Analytics Dashboard'],
     cta: 'View Product',
   },
   {
     id: 'enterprise-erp',
     icon: Building2,
-    name: 'Goodsync Enterprise ERP',
+    name: 'Goodsynk Enterprise ERP',
     tagline: 'Advanced enterprise-grade ERP system.',
     desc: 'A powerful enterprise resource planning solution built for large-scale operations, multi-department workflows, and complex organizational hierarchies.',
     status: 'coming',
@@ -36,7 +36,7 @@ const PRODUCTS = [
   {
     id: 'invoice',
     icon: FileText,
-    name: 'Goodsync Invoice',
+    name: 'Goodsynk Invoice',
     tagline: 'Smart invoicing for streamlined billing.',
     desc: 'Intelligent invoice generation, tracking, and client management — automated and designed to eliminate billing friction.',
     status: 'coming',
@@ -46,7 +46,7 @@ const PRODUCTS = [
   {
     id: 'billing',
     icon: CreditCard,
-    name: 'Goodsync Billing Software',
+    name: 'Goodsynk Billing Software',
     tagline: 'End-to-end billing & transaction management.',
     desc: 'Complete billing and transaction management for seamless financial operations, reconciliation, and compliance.',
     status: 'coming',
@@ -57,7 +57,7 @@ const PRODUCTS = [
   {
     id: 'workflow',
     icon: GitBranch,
-    name: 'Goodsync Workflow Management',
+    name: 'Goodsynk Workflow Management',
     tagline: 'Automates and optimizes business processes.',
     desc: 'Drag-and-drop workflow automation that maps, optimizes, and automates every business process in your organization.',
     status: 'coming',
@@ -67,7 +67,7 @@ const PRODUCTS = [
   {
     id: 'learn',
     icon: BookOpen,
-    name: 'Learn with Goodsync',
+    name: 'Learn with Goodsynk',
     tagline: 'Learning platform for training & skill development.',
     desc: 'A comprehensive learning management system for teams, students, and professionals to build skills at scale.',
     status: 'coming',
@@ -110,7 +110,7 @@ const AllProductsPage = () => {
       <MainNavbar />
 
       {/* Header */}
-      <section className="relative pt-36 pb-20 px-4 text-center overflow-hidden">
+      <section className="relative pt-24 md:pt-36 pb-12 md:pb-20 px-4 text-center overflow-hidden">
         <AmbientBackground showIcons={false} />
         <div className="relative z-10 max-w-4xl mx-auto">
           <motion.span
@@ -161,7 +161,7 @@ const AllProductsPage = () => {
       </section>
 
       {/* Product Cards */}
-      <section className="pb-32 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/60 pt-16">
+      <section className="pb-20 md:pb-32 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/60 pt-16">
         <div className="max-w-7xl mx-auto space-y-8">
           {PRODUCTS.map((product, i) => {
             const c = colorMap[product.color];
@@ -173,11 +173,11 @@ const AllProductsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className={`group relative rounded-3xl border border-slate-200 bg-white hover:bg-slate-50/50 p-8 md:p-10 transition-all duration-500 shadow-sm hover:shadow-2xl hover:-translate-y-2 ${c.glow} overflow-hidden`}
+                className={`group relative rounded-3xl border border-slate-200 bg-white hover:bg-slate-50/50 p-6 md:p-10 transition-all duration-500 shadow-sm hover:shadow-2xl hover:-translate-y-2 ${c.glow} overflow-hidden`}
               >
                 {/* Hover Background Gradient */}
                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-transparent to-${product.color}-50/50 transition-opacity duration-500`} />
-                <div className="relative z-10 flex flex-col lg:flex-row gap-8">
+                <div className="relative z-10 flex flex-col lg:flex-row gap-6 md:gap-8">
                   {/* Left */}
                   <div className="flex-1">
                     <div className="flex items-start gap-5 mb-6">
@@ -213,24 +213,24 @@ const AllProductsPage = () => {
                   </div>
 
                   {/* Right CTA */}
-                  <div className="flex flex-col items-start lg:items-end justify-between gap-4 flex-shrink-0">
+                  <div className="flex flex-col items-stretch lg:items-end justify-center lg:justify-between gap-4 flex-shrink-0 w-full lg:w-auto">
                     {product.status === 'live' ? (
                       <Link
                         to={product.to}
-                        className={`group/btn flex items-center gap-2 bg-gradient-to-r ${c.btn} text-white px-7 py-3.5 rounded-2xl font-black text-base shadow-xl hover:scale-105 transition-all active:scale-95`}
+                        className={`group/btn flex items-center justify-center gap-2 bg-gradient-to-r ${c.btn} text-white px-7 py-3.5 rounded-2xl font-black text-base shadow-xl hover:scale-105 transition-all active:scale-95 w-full lg:w-auto`}
                       >
                         {product.cta}
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Link>
                     ) : (
-                      <div className="text-right space-y-3">
-                        <span className="block bg-slate-50 border border-slate-200 text-slate-500 px-7 py-3.5 rounded-2xl font-bold text-base text-center">
+                      <div className="text-center lg:text-right space-y-3 w-full lg:w-auto">
+                        <span className="block bg-slate-50 border border-slate-200 text-slate-500 px-7 py-3.5 rounded-2xl font-bold text-base text-center w-full lg:w-auto">
                           Coming Soon
                         </span>
                         {product.contact && (
                           <Link
                             to="/main-contact"
-                            className={`flex items-center gap-1.5 text-sm font-bold ${c.icon} hover:opacity-80 transition-opacity`}
+                            className={`flex items-center justify-center lg:justify-end gap-1.5 text-sm font-bold ${c.icon} hover:opacity-80 transition-opacity`}
                           >
                             <Mail className="w-3.5 h-3.5" /> {product.contact}
                           </Link>

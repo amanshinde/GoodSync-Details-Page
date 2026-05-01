@@ -157,7 +157,7 @@ const HeroUI = () => {
              </div>
 
              {/* School Info Card mock */}
-             <div className="w-full bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex items-center gap-5">
+             <div className="w-full bg-white border border-slate-100 rounded-2xl p-4 md:p-5 shadow-sm flex items-center gap-4 md:gap-5">
                 <div className="w-16 h-16 md:w-[72px] md:h-[72px] bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center flex-shrink-0">
                   <div className="text-slate-300 font-black text-xl font-outfit">LOGO</div>
                 </div>
@@ -175,7 +175,7 @@ const HeroUI = () => {
              </div>
 
              {/* Stats Row */}
-             <div className="flex gap-4">
+             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                 <div className="flex-1 bg-white border border-slate-100 rounded-2xl p-4 md:p-5 shadow-sm flex items-center gap-4">
                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center flex-shrink-0">
                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -206,7 +206,7 @@ const HeroUI = () => {
              </div>
 
              {/* Table Area (Fades out at bottom) */}
-             <div className="w-full bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex-1 relative overflow-hidden flex flex-col gap-3">
+             <div className="w-full bg-white border border-slate-100 rounded-2xl p-4 md:p-5 shadow-sm flex-1 relative overflow-hidden flex flex-col gap-2 md:gap-3">
                 <div className="flex justify-between items-center mb-1">
                    <h4 className="text-sm font-bold text-slate-800">Associated Users <span className="text-[10px] text-slate-400 font-normal ml-1">(120 total)</span></h4>
                 </div>

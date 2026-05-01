@@ -25,7 +25,7 @@ const FeatureCard = ({ icon: Icon, title, desc, delay = 0, color = 'blue', id })
       viewport={{ once: true }}
       transition={{ delay, duration: 0.8 }}
       onMouseMove={handleMouseMove}
-      className="group relative h-full bg-indigo-900/85 backdrop-blur-2xl p-10 md:p-12 rounded-[2.5rem] border border-white/20 hover:bg-indigo-800/90 hover:border-indigo-400/50 transition-all duration-500 hover:shadow-[0_20px_50px_-12px_rgba(79,70,229,0.4)] overflow-hidden"
+      className="group relative h-full bg-indigo-900/85 backdrop-blur-2xl p-8 md:p-12 rounded-[2.5rem] border border-white/20 hover:bg-indigo-800/90 hover:border-indigo-400/50 transition-all duration-500 hover:shadow-[0_20px_50px_-12px_rgba(79,70,229,0.4)] overflow-hidden"
     >
       <motion.div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100 z-0"
@@ -159,9 +159,9 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
+    <section id="features" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
       <AmbientBackground />
-      <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col space-y-16">
+      <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col space-y-10 md:space-y-16">
         
         <div className="text-center space-y-10 max-w-4xl mx-auto">
           <motion.div 
@@ -229,7 +229,7 @@ const Features = () => {
          >
            <button 
              onClick={() => setShowAll(!showAll)}
-             className="group px-16 py-8 rounded-full border-4 border-indigo-600 text-slate-900 font-extrabold text-2xl hover:bg-indigo-600 hover:text-white transition-all uppercase tracking-widest shadow-2xl shadow-indigo-100 hover:rotate-1 flex items-center space-x-4 mx-auto"
+             className="group px-8 py-5 md:px-16 md:py-8 rounded-full border-2 md:border-4 border-indigo-600 text-slate-900 font-extrabold text-xl md:text-2xl hover:bg-indigo-600 hover:text-white transition-all uppercase tracking-widest shadow-2xl shadow-indigo-100 hover:rotate-1 flex items-center space-x-4 mx-auto mb-8"
            >
               {showAll ? (
                 <>

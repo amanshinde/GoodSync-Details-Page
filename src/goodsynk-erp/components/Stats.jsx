@@ -75,13 +75,13 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-24 space-y-4"
+          className="text-center mb-12 md:mb-24 space-y-4"
         >
           <span className="text-indigo-600 font-black text-sm uppercase tracking-[0.2em]">Our Impact</span>
           <h2 className="text-5xl md:text-6xl font-black font-outfit text-slate-900 tracking-tight">

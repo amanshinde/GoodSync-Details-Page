@@ -21,7 +21,7 @@ const RoleCard = ({ icon: Icon, role, desc, features, color = 'blue', delay = 0 
       viewport={{ once: true }}
       transition={{ delay, duration: 0.8 }}
       onMouseMove={handleMouseMove}
-      className="group relative bg-white/60 backdrop-blur-3xl p-8 md:p-12 rounded-[3rem] border border-white/80 hover:bg-white hover:border-indigo-100 hover:shadow-2xl transition-all duration-700 h-full flex flex-col overflow-hidden"
+      className="group relative bg-white/60 backdrop-blur-3xl p-6 md:p-12 rounded-[3rem] border border-white/80 hover:bg-white hover:border-indigo-100 hover:shadow-2xl transition-all duration-700 h-full flex flex-col overflow-hidden"
     >
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-[3rem] opacity-0 transition duration-300 group-hover:opacity-100 z-0"
@@ -35,10 +35,10 @@ const RoleCard = ({ icon: Icon, role, desc, features, color = 'blue', delay = 0 
           `,
         }}
       />
-    <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-8 transform group-hover:scale-110 group-hover:rotate-[15deg] transition-all duration-500 shadow-xl shadow-slate-100 ${
+    <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-8 transform group-hover:scale-110 group-hover:rotate-[15deg] transition-all duration-500 shadow-xl shadow-slate-100 ${
       color === 'blue' ? 'bg-indigo-50 text-indigo-600' : 'bg-violet-50 text-violet-600'
     }`}>
-      <Icon className="w-10 h-10 stroke-[1.5]" />
+      <Icon className="w-8 h-8 md:w-10 md:h-10 stroke-[1.5]" />
     </div>
 
     <h3 className="text-2xl lg:text-3xl font-black font-outfit text-slate-900 mb-3 tracking-tight leading-loose group-hover:text-indigo-600 transition-colors flex items-center space-x-3">
@@ -103,9 +103,9 @@ const UserRoles = () => {
   ];
 
   return (
-    <section id="roles" className="py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
+    <section id="roles" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
       <AmbientBackground colorScheme="roles" />
-      <div className="max-w-[1400px] mx-auto space-y-24 relative z-10">
+      <div className="max-w-[1400px] mx-auto space-y-12 md:space-y-24 relative z-10">
         <div className="text-center space-y-10 max-w-4xl mx-auto">
           <motion.div 
              initial={{ opacity: 0, scale: 0.9 }}

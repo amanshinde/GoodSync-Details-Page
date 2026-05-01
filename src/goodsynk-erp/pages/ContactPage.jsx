@@ -10,12 +10,12 @@ const ContactPage = () => {
     <div className="min-h-screen bg-white font-inter text-slate-900 selection:bg-indigo-600/30 selection:text-indigo-600 flex flex-col">
       <Navbar />
 
-      <main className="flex-1 relative pt-32 pb-20">
+      <main className="flex-1 relative pt-24 md:pt-32 pb-16 md:pb-20">
         <AmbientBackground showIcons={false} />
 
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-6">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 space-y-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -55,7 +55,7 @@ const ContactPage = () => {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="lg:col-span-2 space-y-8"
             >
-               <div className="bg-white/60 backdrop-blur-3xl border border-white/70 p-8 rounded-3xl shadow-xl shadow-slate-200/50 space-y-8">
+               <div className="bg-white/60 backdrop-blur-3xl border border-white/70 p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 space-y-8">
                   <div>
                     <h3 className="text-2xl font-black font-outfit text-slate-900 mb-2">Direct Contact</h3>
                     <p className="text-slate-500 font-medium">Reach out directly to our sales and deployment specialists.</p>
@@ -104,7 +104,7 @@ const ContactPage = () => {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="lg:col-span-3"
             >
-               <form className="bg-white/80 backdrop-blur-3xl border border-white border-t-white/80 border-l-white/80 p-8 sm:p-10 rounded-[2.5rem] shadow-2xl shadow-indigo-100/50 space-y-6">
+               <form className="bg-white/80 backdrop-blur-3xl border border-white border-t-white/80 border-l-white/80 p-6 md:p-10 rounded-[2.5rem] shadow-2xl shadow-indigo-100/50 space-y-6">
                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 ml-1">First Name</label>

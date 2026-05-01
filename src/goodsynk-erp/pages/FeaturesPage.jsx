@@ -493,7 +493,7 @@ const FeaturesPage = () => {
             className="relative z-10"
           >
             {/* ── Hero Section of Feature ── */}
-            <section className="min-h-screen flex items-center px-8 xl:px-16 pt-32 pb-20">
+            <section className="min-h-[70vh] flex items-center px-4 md:px-8 xl:px-16 pt-24 md:pt-32 pb-16 md:pb-20">
               <div className="max-w-3xl">
                 {/* Category + Roles */}
                 <motion.div
@@ -601,7 +601,7 @@ const FeaturesPage = () => {
             </section>
 
             {/* ── Live Mock UI Section ── */}
-            <section className="px-8 xl:px-16 pb-24 relative">
+            <section className="px-4 md:px-8 xl:px-16 pb-16 md:pb-24 relative">
               <div className="max-w-3xl">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -627,7 +627,7 @@ const FeaturesPage = () => {
             </section>
 
             {/* ── Highlights Section ── */}
-            <section className="px-8 xl:px-16 py-24 relative">
+            <section className="px-4 md:px-8 xl:px-16 py-16 md:py-24 relative">
               <div className="max-w-3xl">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -662,7 +662,7 @@ const FeaturesPage = () => {
             </section>
 
             {/* ── Who Uses It ── */}
-            <section className="px-8 xl:px-16 py-24 bg-slate-50/50 relative">
+            <section className="px-4 md:px-8 xl:px-16 py-16 md:py-24 bg-slate-50/50 relative">
               <AmbientBackground colorScheme="roles" showIcons={false} />
               <div className="max-w-3xl relative z-10">
                 <motion.div
@@ -698,7 +698,7 @@ const FeaturesPage = () => {
             </section>
 
             {/* ── Previous / Next Navigation ── */}
-            <section className="px-8 xl:px-16 py-20">
+            <section className="px-4 md:px-8 xl:px-16 py-12 md:py-20">
               <div className="max-w-3xl grid grid-cols-2 gap-6">
                 <button
                   disabled={!prev}

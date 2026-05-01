@@ -83,9 +83,9 @@ const Problem = () => {
   ];
 
   return (
-    <section id="problem" className="py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
+    <section id="problem" className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
       <AmbientBackground colorScheme="problem" />
-      <div className="max-w-[1400px] mx-auto text-center space-y-16 relative z-10">
+      <div className="max-w-[1400px] mx-auto text-center space-y-10 md:space-y-16 relative z-10">
         
         {/* Intro */}
         <div className="max-w-4xl mx-auto space-y-6">

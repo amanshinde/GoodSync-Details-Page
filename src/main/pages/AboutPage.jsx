@@ -27,7 +27,7 @@ const AboutPage = () => (
     <MainNavbar />
 
     {/* Hero */}
-    <section className="relative pt-36 pb-24 px-4 overflow-hidden">
+    <section className="relative pt-24 md:pt-36 pb-12 md:pb-20 px-4 overflow-hidden">
       <AmbientBackground showIcons={false} />
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         <motion.span
@@ -60,7 +60,7 @@ const AboutPage = () => (
     </section>
 
     {/* Mission & Vision */}
-    <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200/60 bg-slate-50">
+    <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200/60 bg-slate-50">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {[
           {
@@ -86,7 +86,7 @@ const AboutPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`group relative rounded-3xl ${item.color} border ${item.border} p-10 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden`}
+            className={`group relative rounded-3xl ${item.color} border ${item.border} p-8 md:p-10 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden`}
           >
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-transparent to-slate-100/50 transition-opacity duration-500" />
             <div className="relative z-10">
@@ -100,7 +100,7 @@ const AboutPage = () => (
     </section>
 
     {/* Values */}
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -121,7 +121,7 @@ const AboutPage = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="group relative bg-white border border-slate-200 shadow-sm rounded-3xl p-8 hover:border-indigo-300 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+                className="group relative bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 hover:border-indigo-300 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-indigo-50/30 to-violet-50/30 transition-opacity duration-300" />
                 <div className="relative z-10">
@@ -139,7 +139,7 @@ const AboutPage = () => (
     </section>
 
     {/* Timeline */}
-    <section className="py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200/60 bg-slate-50">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-slate-200/60 bg-slate-50">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -151,7 +151,7 @@ const AboutPage = () => (
           <h2 className="text-4xl md:text-5xl font-black font-outfit tracking-tight mt-4 text-slate-900">Built Step by Step</h2>
         </motion.div>
         <div className="relative">
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-200 to-transparent" />
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-200 to-transparent" />
           <div className="space-y-10">
             {MILESTONES.map((m, i) => (
               <motion.div
@@ -160,7 +160,7 @@ const AboutPage = () => (
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-start gap-8 pl-4"
+                className="flex items-start gap-4 md:gap-8 pl-0 md:pl-4"
               >
                 <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 border-4 border-white relative z-10 shadow-sm">
                   <div className="w-2 h-2 bg-white rounded-full" />
@@ -181,13 +181,13 @@ const AboutPage = () => (
     </section>
 
     {/* CTA */}
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center rounded-3xl bg-gradient-to-br from-indigo-600 to-violet-700 p-12 relative overflow-hidden shadow-2xl shadow-indigo-200"
+          className="text-center rounded-3xl bg-gradient-to-br from-indigo-600 to-violet-700 p-8 md:p-12 relative overflow-hidden shadow-2xl shadow-indigo-200"
         >
           <div className="absolute inset-0 opacity-20" style={{
             backgroundImage: 'radial-gradient(circle at 30% 50%, white 1px, transparent 1px), radial-gradient(circle at 70% 80%, white 1.5px, transparent 1.5px)',
@@ -201,11 +201,11 @@ const AboutPage = () => (
           <div className="relative z-10">
             <h2 className="text-3xl font-black font-outfit mb-4 text-white">Join the Goodsync Journey</h2>
             <p className="text-white/80 font-medium mb-8">We're building the future of business software. Be among the first.</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/products" className="group flex items-center gap-2 bg-white text-indigo-600 px-7 py-3.5 rounded-2xl font-black hover:scale-105 transition-all shadow-xl">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full">
+              <Link to="/products" className="group flex items-center justify-center gap-2 bg-white text-indigo-600 px-7 py-3.5 rounded-2xl font-black hover:scale-105 transition-all shadow-xl w-full sm:w-auto">
                 Explore Products <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/main-contact" className="flex items-center gap-2 bg-white/10 border border-white/20 text-white px-7 py-3.5 rounded-2xl font-bold hover:bg-white/20 transition-all">
+              <Link to="/main-contact" className="flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-7 py-3.5 rounded-2xl font-bold hover:bg-white/20 transition-all w-full sm:w-auto">
                 Get in Touch
               </Link>
             </div>

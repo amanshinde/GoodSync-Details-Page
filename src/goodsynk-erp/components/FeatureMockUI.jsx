@@ -224,7 +224,7 @@ const AttendanceMock = () => {
             </div>
 
             {/* Filters Box */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm grid grid-cols-5 gap-4">
+            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
               {['Academic Year', 'Date', 'Class', 'Section', 'Session'].map((label) => (
                 <div key={label} className="space-y-2">
                   <label className="text-[10px] font-bold text-slate-400 uppercase">{label}</label>
@@ -310,7 +310,7 @@ const ResultsMock = () => {
 
           <div className="p-6 space-y-6 overflow-auto">
             <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-6">
-              <div className="grid grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
                 {['Academic Year', 'Class', 'Section', 'Subject', 'Test Type'].map((label) => (
                   <div key={label} className="space-y-2">
                     <label className="text-[10px] font-bold text-slate-400 uppercase">{label}</label>
@@ -408,7 +408,7 @@ const AssignmentsMock = () => {
 
           <div className="p-6 space-y-6 overflow-auto">
             {/* Stats Cards */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 { label: 'Total Assignments', value: '24', color: 'bg-blue-600', icon: FileText },
                 { label: 'Due This Week', value: '12', color: 'bg-violet-600', icon: Calendar }
@@ -426,7 +426,7 @@ const AssignmentsMock = () => {
             </div>
 
             {/* Filters Toolbar */}
-            <div className="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex gap-4 items-center">
+            <div className="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex flex-wrap gap-4 items-center">
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
                 <input type="text" placeholder="Search assignments..." className="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-3 py-2.5 text-[10px] outline-none" />
@@ -511,7 +511,7 @@ const FeesMock = () => {
                 <span className="text-xs font-bold text-emerald-700">Fee structure saved successfully. Applied to 10 students.</span>
               </div>
 
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="space-y-3">
                   <label className="text-xs font-black text-slate-700">Fee Structure Name *</label>
                   <input type="text" placeholder="e.g., Annual Fee 2024-25" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs outline-none focus:border-blue-500 transition-colors" />
@@ -616,7 +616,7 @@ const CommunicationMock = () => {
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <h3 className="text-xl font-black text-slate-800 mb-6">Send New Message</h3>
 
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-black text-slate-700">Class *</label>
                   <div className="relative">
@@ -693,7 +693,7 @@ const IDCardMock = () => {
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <h3 className="text-lg font-black text-slate-800">Generate School ID Cards</h3>
 
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-black text-slate-400 uppercase tracking-wider">Select Class *</label>
                   <div className="relative">
@@ -720,7 +720,7 @@ const IDCardMock = () => {
 
               <div className="space-y-4">
                 <h3 className="text-lg font-black text-slate-800">Choose ID Card Orientation</h3>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="border-2 border-blue-500 bg-blue-50/50 rounded-2xl p-6 flex flex-col items-center gap-4 transition-all cursor-pointer">
                     <div className="w-24 h-16 border-4 border-blue-600 rounded-lg flex items-center justify-center bg-white shadow-sm">
                       <div className="w-16 h-1 bg-blue-200 rounded-full" />
@@ -783,7 +783,7 @@ const HallTicketMock = () => {
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <h3 className="text-lg font-black text-slate-800">Generate Hall Tickets</h3>
 
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 {[
                   { label: 'Academic Year', value: '20XX-XX' },
                   { label: 'Select Class', value: 'Class X' },

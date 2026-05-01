@@ -150,7 +150,7 @@ const RolesPage = () => {
       </aside>
 
       {/* ── MAIN CONTENT ── */}
-      <main className="lg:pl-80 xl:pl-88 min-h-screen relative pb-32">
+      <main className="lg:pl-80 xl:pl-88 min-h-screen relative pb-16 md:pb-32">
         <AmbientBackground showIcons={false} />
 
         <AnimatePresence mode="wait">
@@ -160,7 +160,7 @@ const RolesPage = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 pt-32 px-8 xl:px-16"
+            className="relative z-10 pt-24 md:pt-32 px-4 md:px-8 xl:px-16"
           >
             <div className="max-w-3xl">
               

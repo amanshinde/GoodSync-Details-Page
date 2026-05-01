@@ -14,12 +14,12 @@ const Navbar = () => {
   }, []);
 
   const location = useLocation();
-  const isSubPage = location.pathname.startsWith('/goodsynk-erp/');
+  const isSubPage = location.pathname.startsWith('/erp/');
 
   const navLinks = [
-    { name: 'Features', to: '/goodsynk-erp/features', isRoute: true },
-    { name: 'Roles', to: '/goodsynk-erp/roles', isRoute: true },
-    { name: 'Contact Sales', to: '/goodsynk-erp/contact', isRoute: true },
+    { name: 'Features', to: '/erp/features', isRoute: true },
+    { name: 'Roles', to: '/erp/roles', isRoute: true },
+    { name: 'Contact Sales', to: '/erp/contact', isRoute: true },
   ];
 
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
           : 'bg-transparent'
           }`}>
           {/* Logo */}
-          <Link to="/goodsynk-erp">
+          <Link to="/erp">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -76,7 +76,7 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-6">
             <a
-              href="https://goodsync-8x4v.onrender.com"
+              href="https://erp.goodsynk.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-base font-black text-slate-800 hover:text-indigo-600 transition-colors tracking-tight"

@@ -18,12 +18,12 @@ const PRODUCTS = [
     desc: 'An all-in-one ERP for schools — attendance, results, fees, ID cards, and more. Used by 500+ institutions.',
     status: 'live',
     color: 'indigo',
-    to: '/goodsynk-erp',
+    to: '/erp',
   },
   {
     id: 'enterprise-erp',
     icon: Building2,
-    name: 'Goodsync Enterprise ERP',
+    name: 'Goodsynk Enterprise ERP',
     tagline: 'Advanced enterprise-grade ERP system.',
     desc: 'A powerful enterprise resource planning solution built for large-scale operations and complex workflows.',
     status: 'coming',
@@ -33,7 +33,7 @@ const PRODUCTS = [
   {
     id: 'invoice',
     icon: FileText,
-    name: 'Goodsync Invoice',
+    name: 'Goodsynk Invoice',
     tagline: 'Smart invoicing solution.',
     desc: 'Streamlined billing operations with smart invoice generation, tracking, and client management.',
     status: 'coming',
@@ -43,7 +43,7 @@ const PRODUCTS = [
   {
     id: 'billing',
     icon: CreditCard,
-    name: 'Goodsync Billing Software',
+    name: 'Goodsynk Billing Software',
     tagline: 'End-to-end billing & transaction management.',
     desc: 'Complete billing and transaction management system for seamless financial operations.',
     status: 'coming',
@@ -53,7 +53,7 @@ const PRODUCTS = [
   {
     id: 'workflow',
     icon: GitBranch,
-    name: 'Goodsync Workflow Management',
+    name: 'Goodsynk Workflow Management',
     tagline: 'Automates business processes.',
     desc: 'Intelligent automation that optimizes every business process and workflow in your organization.',
     status: 'coming',
@@ -63,7 +63,7 @@ const PRODUCTS = [
   {
     id: 'learn',
     icon: BookOpen,
-    name: 'Learn with Goodsync',
+    name: 'Learn with Goodsynk',
     tagline: 'Learning platform for skill development.',
     desc: 'A comprehensive training and skill development platform for teams, students, and professionals.',
     status: 'coming',
@@ -93,18 +93,16 @@ const MainHome = () => (
     <MainNavbar />
 
     {/* ── HERO ── */}
-    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 pb-6 overflow-hidden">
       <AmbientBackground showIcons={false} />
 
-      <div className="relative z-10 text-center max-w-5xl mx-auto pt-24">
+      <div className="relative z-10 text-center max-w-5xl mx-auto pt-20 md:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-3">
-            <Sparkles className="w-3.5 h-3.5" /> One Brand. Every Business Solution.
-          </span>
+
         </motion.div>
 
         <motion.div
@@ -113,9 +111,9 @@ const MainHome = () => (
           transition={{ duration: 0.7, delay: 0.1 }}
         >
           <img
-            src="/fulllogocolor.png"
+            src="https://res.cloudinary.com/dgabaplay/image/upload/v1777631691/2_usc5vr.png"
             alt="Goodsync"
-            className="h-30 md:h-70 w-auto object-contain mx-auto mb-3 drop-shadow-sm"
+            className="h-40 md:h-48 lg:h-60 w-auto object-contain mx-auto mb-6 drop-shadow-sm"
           />
         </motion.div>
 
@@ -144,38 +142,29 @@ const MainHome = () => (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full px-2 sm:px-0"
         >
           <Link
             to="/products"
-            className="group flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl shadow-indigo-200 hover:scale-105 transition-all active:scale-95"
+            className="group flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl shadow-indigo-200 hover:scale-105 transition-all active:scale-95 w-full sm:w-auto"
           >
             Explore All Products
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            to="/goodsynk-erp"
-            className="flex items-center gap-2 bg-white border border-slate-200 text-slate-800 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-all shadow-sm"
+            to="/erp"
+            className="flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-800 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-all shadow-sm w-full sm:w-auto"
           >
             View GOODSYNK ERP
           </Link>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <div className="w-px h-12 bg-gradient-to-b from-transparent to-slate-300" />
-        <p className="text-slate-400 text-xs font-bold uppercase tracking-wider">Scroll</p>
-      </motion.div>
+
     </section>
 
     {/* ── PRODUCTS PREVIEW ── */}
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -206,7 +195,7 @@ const MainHome = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className={`group relative rounded-3xl border border-slate-200 bg-white hover:bg-slate-50/50 p-8 transition-all duration-500 shadow-sm hover:shadow-2xl hover:-translate-y-2 ${c.glow} overflow-hidden`}
+                className={`group relative rounded-3xl border border-slate-200 bg-white hover:bg-slate-50/50 p-6 md:p-8 transition-all duration-500 shadow-sm hover:shadow-2xl hover:-translate-y-2 ${c.glow} overflow-hidden`}
               >
                 {/* Hover gradient background effect */}
                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-transparent to-${product.color}-50/50 transition-opacity duration-500`} />
@@ -275,7 +264,7 @@ const MainHome = () => (
     </section>
 
     {/* ── WHY GOODSYNC ── */}
-    <section className="py-32 px-4 sm:px-6 lg:px-8 border-t border-slate-200/60 bg-white">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 border-t border-slate-200/60 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -299,7 +288,7 @@ const MainHome = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="group bg-white border border-slate-200 shadow-sm rounded-3xl p-8 hover:border-indigo-300 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 hover:border-indigo-300 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
                   <Icon className="w-6 h-6 text-indigo-600" />
@@ -314,13 +303,13 @@ const MainHome = () => (
     </section>
 
     {/* ── CTA BANNER ── */}
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/60">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/60">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl bg-gradient-to-br from-indigo-600 to-violet-700 p-12 md:p-16 text-center overflow-hidden shadow-2xl shadow-indigo-200"
+          className="relative rounded-3xl bg-gradient-to-br from-indigo-600 to-violet-700 p-8 md:p-16 text-center overflow-hidden shadow-2xl shadow-indigo-200"
         >
           <div className="absolute inset-0 opacity-20" style={{
             backgroundImage: 'radial-gradient(circle at 30% 50%, white 1px, transparent 1px), radial-gradient(circle at 70% 80%, white 1.5px, transparent 1.5px)',
@@ -338,17 +327,17 @@ const MainHome = () => (
             <p className="text-white/80 text-xl font-medium mb-10 max-w-2xl mx-auto">
               Start with GOODSYNK ERP today or get in touch to learn what's coming next.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full">
               <Link
-                to="/goodsynk-erp"
-                className="group flex items-center gap-2 bg-white text-indigo-600 px-8 py-4 rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl"
+                to="/erp"
+                className="group flex items-center justify-center gap-2 bg-white text-indigo-600 px-8 py-4 rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl w-full sm:w-auto"
               >
                 Explore GOODSYNK ERP
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/main-contact"
-                className="flex items-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition-all"
+                className="flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition-all w-full sm:w-auto"
               >
                 Contact Us
               </Link>

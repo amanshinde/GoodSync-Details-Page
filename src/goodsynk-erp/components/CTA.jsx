@@ -4,7 +4,7 @@ import { ArrowRight, Check } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section id="cta" className="py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section id="cta" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -27,7 +27,7 @@ const CTA = () => {
             className="absolute -bottom-1/3 -left-1/4 w-[600px] h-[600px] bg-white rounded-full blur-[100px]"
           />
           
-          <div className="relative z-10 text-center space-y-16 p-16 md:p-32">
+          <div className="relative z-10 text-center space-y-10 md:space-y-16 p-8 md:p-32">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -47,10 +47,10 @@ const CTA = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="bg-white text-indigo-600 px-12 py-5 rounded-[2rem] font-black text-xl shadow-4xl shadow-indigo-900/20 flex items-center space-x-4 hover:bg-indigo-50 border-[4px] border-white/20 group"
+                className="w-full sm:w-auto bg-white text-indigo-600 px-8 py-4 md:px-12 md:py-5 rounded-[2rem] font-black text-lg md:text-xl shadow-4xl shadow-indigo-900/20 flex items-center justify-center space-x-4 hover:bg-indigo-50 border-[4px] border-white/20 group"
               >
                 <span>Start Free Trial</span>
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-3 transition-transform" />
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-3 transition-transform" />
               </motion.button>
               
               <div className="flex items-center space-x-8">

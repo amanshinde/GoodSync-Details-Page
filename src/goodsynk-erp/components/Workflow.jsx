@@ -61,8 +61,8 @@ const Workflow = () => {
   ];
 
   return (
-    <section id="workflow" className="py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
-      <div className="max-w-[1400px] mx-auto space-y-24">
+    <section id="workflow" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto space-y-12 md:space-y-24">
         
         <div className="text-center space-y-10 max-w-4xl mx-auto">
           <motion.div 
@@ -104,9 +104,9 @@ const Workflow = () => {
            viewport={{ once: true }}
            className="text-center pt-10"
         >
-           <button className="inline-flex items-center space-x-4 bg-indigo-600 text-white px-10 py-4 rounded-full font-black text-lg hover:bg-slate-900 transition-all group shadow-2xl shadow-indigo-200/50">
+           <button className="w-full sm:w-auto inline-flex items-center justify-center space-x-4 bg-indigo-600 text-white px-6 py-4 md:px-10 md:py-4 rounded-full font-black text-lg hover:bg-slate-900 transition-all group shadow-2xl shadow-indigo-200/50">
               <span>Schedule a Managed Setup</span>
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform" />
            </button>
         </motion.div>
         

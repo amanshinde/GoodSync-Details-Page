@@ -54,7 +54,7 @@ const MainContactPage = () => {
       <MainNavbar />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-20 px-4 text-center overflow-hidden">
+      <section className="relative pt-24 md:pt-36 pb-12 md:pb-20 px-4 text-center overflow-hidden">
         <AmbientBackground showIcons={false} />
         <div className="relative z-10 max-w-3xl mx-auto">
           <motion.span
@@ -101,7 +101,7 @@ const MainContactPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`group relative rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 p-8 transition-all duration-300 block overflow-hidden`}
+                className={`group relative rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 p-6 md:p-8 transition-all duration-300 block overflow-hidden`}
               >
                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-transparent to-${opt.color}-50/50 transition-opacity duration-300`} />
                 <div className="relative z-10">
@@ -119,14 +119,14 @@ const MainContactPage = () => {
       </section>
 
       {/* Contact Form + Info */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/60 pt-16">
+      <section className="pb-20 md:pb-32 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/60 pt-16">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10">
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-3 bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm"
+            className="lg:col-span-3 bg-white border border-slate-200 rounded-3xl p-6 md:p-10 shadow-sm"
           >
             <h2 className="text-2xl font-black font-outfit mb-2 text-slate-900">Send a Message</h2>
             <p className="text-slate-500 text-sm font-medium mb-8">We'll get back to you within one business day.</p>
@@ -204,7 +204,7 @@ const MainContactPage = () => {
             viewport={{ once: true }}
             className="lg:col-span-2 space-y-6"
           >
-            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
+            <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm">
               <h3 className="text-xl font-black font-outfit mb-6 text-slate-900">Office Hours</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">

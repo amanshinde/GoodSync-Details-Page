@@ -82,10 +82,10 @@ function App() {
         <Route path="/main-contact" element={<MainContactPage />} />
 
         {/* ── GOODSYNK ERP product pages ── */}
-        <Route path="/goodsynk-erp" element={<GoodsynkERPPage />} />
-        <Route path="/goodsynk-erp/features" element={<FeaturesPage />} />
-        <Route path="/goodsynk-erp/roles" element={<RolesPage />} />
-        <Route path="/goodsynk-erp/contact" element={<ContactPage />} />
+        <Route path="/erp" element={<GoodsynkERPPage />} />
+        <Route path="/erp/features" element={<FeaturesPage />} />
+        <Route path="/erp/roles" element={<RolesPage />} />
+        <Route path="/erp/contact" element={<ContactPage />} />
 
         {/* Legacy redirects (keep old routes working) */}
         <Route path="/features" element={<FeaturesPage />} />

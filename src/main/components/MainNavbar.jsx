@@ -38,7 +38,7 @@ const MainNavbar = () => {
               transition={{ duration: 0.2 }}
               className="cursor-pointer"
             >
-              <img src="/goodsynk.png" alt="Goodsync Logo" className="h-10 w-auto object-contain" />
+              <img src="https://res.cloudinary.com/dgabaplay/image/upload/v1777631691/3_wqplpc.png" alt="Goodsync Logo" className="h-16 w-auto object-contain" />
             </motion.div>
           </Link>
 
@@ -74,43 +74,54 @@ const MainNavbar = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="absolute top-full left-0 right-0 px-4 pt-2 lg:hidden"
-          >
-            <div className="bg-white/95 backdrop-blur-3xl rounded-3xl p-8 shadow-2xl border border-slate-100 space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.to}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center justify-between text-lg font-bold p-4 rounded-2xl transition-colors ${isActive(link.to) ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
-                    }`}
-                >
-                  {link.name}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              ))}
-              <div className="h-px bg-slate-100" />
-              <a
-                href="https://goodsync-8x4v.onrender.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center py-4 text-slate-800 font-black rounded-2xl border border-slate-200 hover:bg-slate-50 transition-colors"
-              >
-                Sign In
-              </a>
-              <Link
-                to="/products"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-center py-4 bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-black rounded-2xl"
-              >
-                View Products
-              </Link>
-            </div>
-          </motion.div>
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMenuOpen(false)}
+              className="fixed inset-0 bg-slate-900/20 backdrop-blur-sm z-[-1] lg:hidden"
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute top-full left-0 right-0 px-4 pt-2 lg:hidden"
+            >
+              <div className="bg-white/95 backdrop-blur-3xl rounded-3xl p-6 md:p-8 shadow-2xl border border-slate-100 space-y-4 md:space-y-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.to}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`flex items-center justify-between text-lg md:text-xl font-bold p-4 md:p-5 rounded-2xl transition-colors ${isActive(link.to) ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50'
+                      }`}
+                  >
+                    {link.name}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                ))}
+                <div className="h-px bg-slate-100" />
+                <div className="flex flex-col gap-4">
+                  <a
+                    href="https://goodsync-8x4v.onrender.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center py-4 md:py-5 text-slate-800 font-black rounded-2xl border border-slate-200 hover:bg-slate-50 transition-colors text-lg"
+                  >
+                    Sign In
+                  </a>
+                  <Link
+                    to="/products"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block w-full text-center py-4 md:py-5 bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-black rounded-2xl text-lg shadow-xl shadow-indigo-100"
+                  >
+                    View Products
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>

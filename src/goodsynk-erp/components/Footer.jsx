@@ -24,12 +24,12 @@ const Footer = () => {
   const socialIcons = [Mail, Globe, Shield, Rocket];
 
   return (
-    <footer className="bg-white px-4 sm:px-6 lg:px-8 pt-32 pb-12 relative overflow-hidden">
+    <footer className="bg-white px-4 sm:px-6 lg:px-8 pt-20 md:pt-32 pb-12 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-50/50 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2 opacity-60"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-violet-50/50 rounded-full blur-[100px] -z-10 -translate-x-1/3 translate-y-1/3 opacity-50"></div>
 
-      <div className="max-w-[1400px] mx-auto space-y-20 relative z-10">
+      <div className="max-w-[1400px] mx-auto space-y-12 md:space-y-20 relative z-10">
 
         {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
@@ -64,18 +64,18 @@ const Footer = () => {
             <div className="space-y-8">
               <h4 className="text-sm font-black font-outfit text-slate-900 uppercase tracking-[0.2em]">Product</h4>
               <div className="space-y-4">
-                <FooterLink to="/features">Feature Hub</FooterLink>
-                <FooterLink to="/roles">User Roles</FooterLink>
-                <FooterLink href="/#why-goodsynk-erp">Why GOODSYNK ERP</FooterLink>
-                <FooterLink href="/#workflow">How It Works</FooterLink>
+                <FooterLink to="/erp/features">Feature Hub</FooterLink>
+                <FooterLink to="/erp/roles">User Roles</FooterLink>
+                <FooterLink href="/erp#why-goodsynk-erp">Why GOODSYNK ERP</FooterLink>
+                <FooterLink href="/erp#workflow">How It Works</FooterLink>
               </div>
             </div>
 
             <div className="space-y-8">
               <h4 className="text-sm font-black font-outfit text-slate-900 uppercase tracking-[0.2em]">Company</h4>
               <div className="space-y-4">
-                <FooterLink href="#">About Us</FooterLink>
-                <FooterLink to="/contact">Contact Sales</FooterLink>
+                <FooterLink to="/about">About Us</FooterLink>
+                <FooterLink to="/erp/contact">Contact Sales</FooterLink>
                 <FooterLink href="#">Partner Network</FooterLink>
               </div>
             </div>

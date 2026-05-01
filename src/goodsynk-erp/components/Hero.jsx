@@ -65,28 +65,28 @@ const Hero = () => {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 px-4 sm:px-0">
             <motion.button
-              onClick={() => navigate('/features')}
+              onClick={() => navigate('/erp/features')}
               whileHover={{ scale: 1.05, y: -2, boxShadow: "0 20px 40px rgba(79, 70, 229, 0.3)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="group relative bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-10 py-5 rounded-[2rem] font-bold text-xl shadow-2xl shadow-indigo-200/50 border-[6px] border-white ring-1 ring-slate-100 flex items-center space-x-3 overflow-hidden"
+              className="group relative bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-6 py-4 md:px-10 md:py-5 rounded-[2rem] font-bold text-lg md:text-xl shadow-2xl shadow-indigo-200/50 border-[4px] md:border-[6px] border-white ring-1 ring-slate-100 flex items-center justify-center space-x-3 overflow-hidden w-full sm:w-auto"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
               <span>Explore Features</span>
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform stroke-[2.5]" />
+              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform stroke-[2.5]" />
             </motion.button>
 
             <motion.div
               whileHover={{ x: 5 }}
-              className="flex items-center space-x-4 group cursor-pointer"
+              className="flex items-center justify-center space-x-4 group cursor-pointer w-full sm:w-auto"
             >
-              <div className="w-16 h-16 rounded-full border-2 border-slate-100 flex items-center justify-center bg-white shadow-lg shadow-slate-100/50 group-hover:border-indigo-200 transition-all relative overflow-hidden">
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-slate-100 flex items-center justify-center bg-white shadow-lg shadow-slate-100/50 group-hover:border-indigo-200 transition-all relative overflow-hidden">
                 <div className="absolute inset-0 bg-indigo-50 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
-                <Calendar className="w-6 h-6 text-indigo-600 relative z-10" />
+                <Calendar className="w-5 h-5 md:w-6 md:h-6 text-indigo-600 relative z-10" />
               </div>
-              <span className="text-xl font-bold text-slate-800 group-hover:text-indigo-600 transition-all">Request Demo</span>
+              <span className="text-lg md:text-xl font-bold text-slate-800 group-hover:text-indigo-600 transition-all">Request Demo</span>
             </motion.div>
           </div>
 
