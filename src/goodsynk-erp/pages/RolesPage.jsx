@@ -5,8 +5,8 @@ import {
   Shield, GraduationCap, Heart, Check, Users, ChevronRight, Settings, 
   Smartphone, MonitorSmartphone
 } from 'lucide-react';
-import AmbientBackground from './AmbientBackground';
-import Navbar from './Navbar';
+import AmbientBackground from '../components/AmbientBackground';
+import Navbar from '../components/Navbar';
 
 const ALL_ROLES = [
   {

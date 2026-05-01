@@ -4,11 +4,11 @@ import { Link, useSearchParams } from 'react-router-dom';
 import {
   Users, Calendar, FileText, GraduationCap, CreditCard, Bell,
   MessageSquare, IdCard, ClipboardList, PieChart, Shield,
-  ChevronRight, Search, Check, Zap, ArrowRight
+  ChevronRight, Search, Check, Zap, ArrowRight, X, LayoutTemplate
 } from 'lucide-react';
-import AmbientBackground from './AmbientBackground';
-import Navbar from './Navbar';
-import FeatureMockUI from './FeatureMockUI';
+import AmbientBackground from '../components/AmbientBackground';
+import Navbar from '../components/Navbar';
+import FeatureMockUI from '../components/FeatureMockUI';
 
 const ALL_FEATURES = [
   {
@@ -246,9 +246,153 @@ const iconBgColors = {
   teal: 'bg-teal-100 text-teal-600',
 };
 
+const ID_CARD_TEMPLATES = {
+  horizontal: [
+    { src: '/horizontal/1.png', label: 'Horizontal Template 1' },
+    { src: '/horizontal/2.png', label: 'Horizontal Template 2' },
+  ],
+  landscape: [
+    { src: '/landscape/1.png', label: 'Landscape Template 1' },
+    { src: '/landscape/2.png', label: 'Landscape Template 2' },
+  ],
+};
+
+const IDCardPreviewModal = ({ onClose }) => {
+  const [tab, setTab] = useState('horizontal');
+  const [activeImg, setActiveImg] = useState(0);
+
+  const templates = ID_CARD_TEMPLATES[tab];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ opacity: 0, scale: 0.92, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.92, y: 20 }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Modal Header */}
+        <div className="flex items-center justify-between px-8 py-5 border-b border-slate-100">
+          <div>
+            <p className="text-xs font-black text-amber-600 uppercase tracking-[0.15em] mb-1">ID Card Templates</p>
+            <h3 className="text-xl font-black font-outfit text-slate-900">Preview Card Layouts</h3>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors"
+          >
+            <X className="w-4 h-4 text-slate-600" />
+          </button>
+        </div>
+
+        {/* Tab switcher */}
+        <div className="flex gap-2 px-8 pt-5">
+          {['horizontal', 'landscape'].map(t => (
+            <button
+              key={t}
+              onClick={() => { setTab(t); setActiveImg(0); }}
+              className={`px-5 py-2 rounded-xl text-sm font-bold capitalize transition-all ${
+                tab === t
+                  ? 'bg-amber-500 text-white shadow-lg shadow-amber-200'
+                  : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
+              }`}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+
+        {/* Image viewer */}
+        <div className="px-8 py-6">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={`${tab}-${activeImg}`}
+              src={templates[activeImg].src}
+              alt={templates[activeImg].label}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className="w-full rounded-2xl object-contain border border-slate-100 shadow-sm max-h-[420px]"
+            />
+          </AnimatePresence>
+
+          {/* Thumbnail strip */}
+          <div className="flex gap-3 mt-4 justify-center">
+            {templates.map((t, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveImg(i)}
+                className={`w-20 h-14 rounded-xl overflow-hidden border-2 transition-all ${
+                  activeImg === i ? 'border-amber-500 shadow-md' : 'border-slate-200 opacity-60 hover:opacity-100'
+                }`}
+              >
+                <img src={t.src} alt={t.label} className="w-full h-full object-cover" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+const HallTicketPreviewModal = ({ onClose }) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md"
+    onClick={onClose}
+  >
+    <motion.div
+      initial={{ opacity: 0, scale: 0.92, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.92, y: 20 }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+      className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden"
+      onClick={e => e.stopPropagation()}
+    >
+      {/* Modal Header */}
+      <div className="flex items-center justify-between px-8 py-5 border-b border-slate-100">
+        <div>
+          <p className="text-xs font-black text-orange-600 uppercase tracking-[0.15em] mb-1">Hall Ticket Template</p>
+          <h3 className="text-xl font-black font-outfit text-slate-900">Preview Admit Card Layout</h3>
+        </div>
+        <button
+          onClick={onClose}
+          className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors"
+        >
+          <X className="w-4 h-4 text-slate-600" />
+        </button>
+      </div>
+
+      {/* Image viewer */}
+      <div className="px-8 py-6">
+        <img
+          src="/hallticket.pdf.png"
+          alt="Hall Ticket Template"
+          className="w-full rounded-2xl object-contain border border-slate-100 shadow-sm max-h-[480px]"
+        />
+        <p className="text-center text-xs text-slate-400 font-semibold mt-4">Auto-populated with student details & exam schedule</p>
+      </div>
+    </motion.div>
+  </motion.div>
+);
+
 const FeaturesPage = () => {
   const [selected, setSelected] = useState(ALL_FEATURES[0]);
   const [search, setSearch] = useState('');
+  const [showIDCardModal, setShowIDCardModal] = useState(false);
+  const [showHallTicketModal, setShowHallTicketModal] = useState(false);
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
@@ -422,6 +566,37 @@ const FeaturesPage = () => {
                     </div>
                   ))}
                 </motion.div>
+
+                {/* Preview Buttons — ID Cards & Hall Tickets */}
+                {(selected.id === 'id-cards' || selected.id === 'hall-tickets') && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.32 }}
+                    className="mt-8"
+                  >
+                    {selected.id === 'id-cards' && (
+                      <button
+                        onClick={() => setShowIDCardModal(true)}
+                        className="group inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-7 py-3.5 rounded-2xl font-black text-base shadow-xl shadow-amber-200 hover:scale-105 active:scale-95 transition-all duration-200"
+                      >
+                        <LayoutTemplate className="w-5 h-5" />
+                        Preview ID Card Templates
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    )}
+                    {selected.id === 'hall-tickets' && (
+                      <button
+                        onClick={() => setShowHallTicketModal(true)}
+                        className="group inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white px-7 py-3.5 rounded-2xl font-black text-base shadow-xl shadow-orange-200 hover:scale-105 active:scale-95 transition-all duration-200"
+                      >
+                        <LayoutTemplate className="w-5 h-5" />
+                        Preview Hall Ticket Template
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    )}
+                  </motion.div>
+                )}
               </div>
             </section>
 
@@ -548,6 +723,16 @@ const FeaturesPage = () => {
               </div>
             </section>
           </motion.div>
+        </AnimatePresence>
+
+        {/* ID Card Preview Modal */}
+        <AnimatePresence>
+          {showIDCardModal && <IDCardPreviewModal onClose={() => setShowIDCardModal(false)} />}
+        </AnimatePresence>
+
+        {/* Hall Ticket Preview Modal */}
+        <AnimatePresence>
+          {showHallTicketModal && <HallTicketPreviewModal onClose={() => setShowHallTicketModal(false)} />}
         </AnimatePresence>
       </main>
     </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Building } from 'lucide-react';
-import AmbientBackground from './AmbientBackground';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import AmbientBackground from '../components/AmbientBackground';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const ContactPage = () => {
   return (

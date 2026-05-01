@@ -14,12 +14,12 @@ const Navbar = () => {
   }, []);
 
   const location = useLocation();
-  const isSubPage = location.pathname === '/features' || location.pathname === '/roles' || location.pathname === '/contact';
+  const isSubPage = location.pathname.startsWith('/goodsynk-erp/');
 
   const navLinks = [
-    { name: 'Features', href: '#features', to: '/features', isRoute: true },
-    { name: 'Roles', href: '#roles', to: '/roles', isRoute: true },
-    { name: 'Contact Sales', href: '#contact', to: '/contact', isRoute: true },
+    { name: 'Features', to: '/goodsynk-erp/features', isRoute: true },
+    { name: 'Roles', to: '/goodsynk-erp/roles', isRoute: true },
+    { name: 'Contact Sales', to: '/goodsynk-erp/contact', isRoute: true },
   ];
 
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
           : 'bg-transparent'
           }`}>
           {/* Logo */}
-          <Link to="/">
+          <Link to="/goodsynk-erp">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -63,7 +63,7 @@ const Navbar = () => {
               ) : (
                 <a
                   key={link.name}
-                  href={isSubPage ? `/${link.href}` : link.href}
+                  href={link.href || '#'}
                   className="text-base font-bold text-slate-500 hover:text-indigo-600 transition-all flex items-center space-x-1 group"
                 >
                   <span>{link.name}</span>
@@ -75,9 +75,14 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-6">
-            <button className="text-base font-black text-slate-800 hover:text-indigo-600 transition-colors tracking-tight">
+            <a
+              href="https://goodsync-8x4v.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-black text-slate-800 hover:text-indigo-600 transition-colors tracking-tight"
+            >
               Sign In
-            </button>
+            </a>
             <button className="group relative bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-6 py-2.5 rounded-xl font-black text-base shadow-xl shadow-indigo-200 flex items-center space-x-2 hover:scale-105 transition-all active:scale-95 overflow-hidden">
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               <span>Request Demo</span>

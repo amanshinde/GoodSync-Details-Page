@@ -11,27 +11,27 @@ const StatCard = ({ icon: Icon, value, label, subtext, color = "blue", delay = 0
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay, duration: 0.6 }}
-      className="group relative bg-[#F9FAFB]/50 hover:bg-white p-10 md:p-14 rounded-[3.5rem] border border-slate-100 hover:border-indigo-100 hover:shadow-[0_20px_50px_rgba(79,70,229,0.06)] transition-all duration-500 overflow-hidden"
+      transition={{ delay, duration: 0.4 }}
+      className="group relative bg-[#F9FAFB]/50 hover:bg-white p-6 md:p-8 rounded-[2.5rem] border border-slate-100 hover:border-indigo-100 hover:shadow-[0_20px_50px_rgba(79,70,229,0.06)] transition-all duration-500 overflow-hidden"
     >
       <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 transition-all duration-500">
         <ArrowUpRight className="w-6 h-6 text-indigo-500" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left space-y-6">
-        <div className={`w-16 h-16 rounded-[1.5rem] flex items-center justify-center text-2xl shadow-xl shadow-slate-100 transition-transform duration-500 group-hover:rotate-[10deg] ${color === 'blue' ? 'bg-indigo-50 text-indigo-600' : 'bg-violet-50 text-violet-600'
+      <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left space-y-3">
+        <div className={`w-11 h-11 rounded-[1.2rem] flex items-center justify-center text-xl shadow-lg shadow-slate-100 transition-transform duration-500 group-hover:rotate-[10deg] ${color === 'blue' ? 'bg-indigo-50 text-indigo-600' : 'bg-violet-50 text-violet-600'
           }`}>
-          <Icon className="w-8 h-8 stroke-[2]" />
+          <Icon className="w-5 h-5 stroke-[2]" />
         </div>
         <div className="space-y-2">
-          <h3 className="text-5xl md:text-6xl font-black font-outfit text-slate-900 tracking-tighter">
+          <h3 className="text-4xl md:text-5xl font-black font-outfit text-slate-900 tracking-tighter">
             {value}
           </h3>
-          <p className="text-lg font-bold text-slate-400 group-hover:text-indigo-500 transition-colors tracking-tight">
+          <p className="text-sm font-bold text-slate-400 group-hover:text-indigo-500 transition-colors tracking-tight">
             {label}
           </p>
         </div>
-        <div className="pt-4 border-t border-slate-100 w-full group-hover:border-indigo-100 transition-colors">
+        <div className="pt-3 border-t border-slate-100 w-full group-hover:border-indigo-100 transition-colors">
           <p className="text-slate-400 text-sm font-semibold flex items-center justify-center sm:justify-start">
             <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
             {subtext}
